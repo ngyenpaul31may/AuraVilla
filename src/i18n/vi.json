@@ -36,7 +36,8 @@
   "insights": {
     "badge1": "ĐẦU TƯ",
     "badge2": "ĐỘC QUYỀN",
-    "titleBefore": "Phân tích bất động sản",
+    "titleLine1": "Phân tích",
+    "titleLine2": "bất động sản",
     "titleAccent": "bằng dữ liệu",
     "subtitle": "Nền tảng của chúng tôi ứng dụng phân tích thông minh và xu hướng thị trường để giúp bạn tìm ra các bất động sản tiềm năng cao, kết hợp dữ liệu thời gian thực và biểu đồ trực quan.",
     "tabs": {

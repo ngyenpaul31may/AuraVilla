@@ -36,7 +36,8 @@
   "insights": {
     "badge1": "INVESTMENTS",
     "badge2": "EXCLUSIVE",
-    "titleBefore": "Data-driven property",
+    "titleLine1": "Data-driven",
+    "titleLine2": "property",
     "titleAccent": "insights",
     "subtitle": "Our platform leverages smart analytics and market trends to help you find high-potential investments. We combine real-time data with intuitive visual dashboards so you can pinpoint properties poised for growth.",
     "tabs": {
