@@ -1565,14 +1565,14 @@ button {
 }
 
 .footer-brand-icon {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border-radius: 8px;
-  background-color: var(--accent-blue);
-  color: #ffffff;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .footer-tagline {

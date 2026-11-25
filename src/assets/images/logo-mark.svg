@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="avCobaltMark" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2B50EC" />
+      <stop offset="100%" stop-color="#4F75FF" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#avCobaltMark)" />
+  <path
+    d="M15 31L32 16L49 31"
+    stroke="#FFFFFF"
+    stroke-width="4.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M21 30.5L32 48L43 30.5"
+    stroke="#FFFFFF"
+    stroke-width="4.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M24.5 31.5H39.5"
+    stroke="#C6D8FF"
+    stroke-width="3.2"
+    stroke-linecap="round"
+  />
+</svg>

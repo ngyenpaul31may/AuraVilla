@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="src/assets/images/logo-full-dark.svg" />
+    <img src="src/assets/images/logo-full-light.svg" alt="AuraVilla Logo" width="220" />
+  </picture>
+</p>
+
 # AuraVilla — Real Estate & Luxury Home Showcase
 
 <p align="center">
@@ -40,7 +47,7 @@
 AuraVilla/
 ├── src/
 │   ├── assets/
-│   │   └── images/       # Ảnh kiến trúc bất động sản (.png) & favicon.svg
+│   │   └── images/       # Bộ logo thương hiệu (logo-*.svg, favicon.svg) & ảnh bất động sản (.png)
 │   ├── css/
 │   │   └── style.css     # Hệ thống Design Tokens & Stylesheet
 │   ├── i18n/
