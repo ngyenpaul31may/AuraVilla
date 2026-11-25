@@ -2017,8 +2017,8 @@ button {
   grid-column: 1 / span 2;
   background: var(--mesh-empire);
   display: grid;
-  grid-template-columns: minmax(210px, 0.78fr) minmax(0, 1.22fr);
-  gap: 32px;
+  grid-template-columns: minmax(205px, 0.72fr) minmax(0, 1.28fr);
+  gap: 38px;
   align-items: center;
   min-height: 336px;
   padding: 34px 0 0 32px;
@@ -2027,7 +2027,7 @@ button {
 .empire-copy {
   position: relative;
   z-index: 2;
-  max-width: 248px;
+  max-width: 232px;
   padding-bottom: 34px;
 }
 
@@ -2044,8 +2044,8 @@ button {
 
 .empire-widget {
   position: relative;
-  width: 106%;
-  max-width: 460px;
+  width: 104%;
+  max-width: 450px;
   justify-self: start;
   background: linear-gradient(
     180deg,
@@ -2059,7 +2059,7 @@ button {
   border-radius: 26px 26px 0 0;
   padding: 20px 22px 26px;
   box-shadow: 0 20px 48px rgba(31, 41, 55, 0.08);
-  transform: rotate(7.5deg) translate(20px, 16px);
+  transform: rotate(8deg) translate(32px, 16px);
   transform-origin: top left;
 }
 
@@ -2111,25 +2111,55 @@ button {
 }
 
 .agent-card.is-featured {
-  margin: 0 18px 16px -14px;
+  position: relative;
+  z-index: 3;
+  margin: 0 22px 16px 0;
   background: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 24px 48px rgba(31, 41, 55, 0.14);
+  border: 1.5px solid #ffffff;
+  transform: translate(-28px, -2px) scale(1.055);
+  transform-origin: center center;
+  box-shadow: 0 30px 54px -10px rgba(24, 24, 38, 0.22),
+    0 14px 24px -8px rgba(24, 24, 38, 0.14),
+    0 4px 10px rgba(24, 24, 38, 0.06),
+    inset 0 1.5px 0 #ffffff;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.32s ease;
+}
+
+.bento-empire:hover .agent-card.is-featured {
+  transform: translate(-30px, -6px) scale(1.07);
+  box-shadow: 0 36px 64px -10px rgba(24, 24, 38, 0.26),
+    0 18px 28px -8px rgba(24, 24, 38, 0.16),
+    inset 0 1.5px 0 #ffffff;
 }
 
 :root[data-theme="dark"] .agent-card.is-featured {
   background: var(--bg-surface);
-  border-color: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 30px 54px -10px rgba(0, 0, 0, 0.65),
+    0 14px 24px -8px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+:root[data-theme="dark"] .bento-empire:hover .agent-card.is-featured {
+  box-shadow: 0 36px 64px -10px rgba(0, 0, 0, 0.75),
+    0 18px 28px -8px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
 .agent-card.is-secondary {
-  margin: 0 10px 0 0;
+  position: relative;
+  z-index: 1;
+  margin: 4px 16px 0 0;
+  transform: scale(0.965);
+  transform-origin: left top;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.68) 0%,
-    rgba(255, 255, 255, 0.28) 100%
+    rgba(255, 255, 255, 0.56) 0%,
+    rgba(255, 255, 255, 0.2) 100%
   );
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  box-shadow: none;
 }
 
 :root[data-theme="dark"] .agent-card.is-secondary {
@@ -2586,8 +2616,14 @@ button {
     display: none;
   }
 
-  .agent-card.is-featured {
+  .agent-card.is-featured,
+  .agent-card.is-secondary {
+    transform: none;
     margin: 0 0 12px;
+  }
+
+  .bento-empire:hover .agent-card.is-featured {
+    transform: none;
   }
 
   .modal-dialog {
@@ -2644,8 +2680,14 @@ button {
     transform: none;
   }
 
-  .agent-card.is-featured {
+  .agent-card.is-featured,
+  .agent-card.is-secondary {
+    transform: none;
     margin: 0 0 12px;
+  }
+
+  .bento-empire:hover .agent-card.is-featured {
+    transform: none;
   }
 }
 
