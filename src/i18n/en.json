@@ -188,7 +188,8 @@
   },
   "dream": {
     "line1": "Invest Today in",
-    "accent": "\"a Dream",
+    "accentSup": "a",
+    "accentWord": "Dream",
     "line2": "House",
     "findMore": "Find more",
     "cards": {

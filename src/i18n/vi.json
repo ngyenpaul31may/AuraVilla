@@ -188,7 +188,8 @@
   },
   "dream": {
     "line1": "Đầu tư ngay vào",
-    "accent": "\"Ngôi nhà",
+    "accentSup": "một",
+    "accentWord": "Ngôi nhà",
     "line2": "Mơ ước",
     "findMore": "Tìm hiểu thêm",
     "cards": {

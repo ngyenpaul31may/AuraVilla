@@ -643,12 +643,13 @@
         <div class="container">
           <div class="dream-banner">
             <div class="dream-hero-composition">
-              <div class="dream-line-1" data-i18n="dream.line1">
+              <h2 class="dream-line-1" data-i18n="dream.line1">
                 Invest Today in
-              </div>
+              </h2>
               <div class="dream-split-row">
-                <span class="dream-accent" data-i18n="dream.accent">
-                  "a Dream
+                <span class="dream-accent">
+                  <sup class="dream-accent-sup" data-i18n="dream.accentSup">a</sup>
+                  <span data-i18n="dream.accentWord">Dream</span>
                 </span>
                 <span class="dream-house-word" data-i18n="dream.line2">
                   House
@@ -656,7 +657,7 @@
               </div>
 
               <div class="dream-house-photo" aria-hidden="true">
-                <img src="assets/images/dream-house-angle.png" alt="" />
+                <img src="assets/images/dream-house-cutout.png" alt="" />
               </div>
             </div>
 
@@ -672,7 +673,17 @@
                 </div>
                 <button type="button" class="find-more-btn" data-open-inquiry>
                   <span data-i18n="dream.findMore">Find more</span>
-                  <span class="mini-arrow" aria-hidden="true">›</span>
+                  <span class="mini-arrow" aria-hidden="true">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M9 6L15 12L9 18"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
                 </button>
               </article>
 
@@ -687,7 +698,17 @@
                 </div>
                 <button type="button" class="find-more-btn" data-open-inquiry>
                   <span data-i18n="dream.findMore">Find more</span>
-                  <span class="mini-arrow" aria-hidden="true">›</span>
+                  <span class="mini-arrow" aria-hidden="true">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M9 6L15 12L9 18"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
                 </button>
               </article>
 
@@ -702,7 +723,17 @@
                 </div>
                 <button type="button" class="find-more-btn" data-open-inquiry>
                   <span data-i18n="dream.findMore">Find more</span>
-                  <span class="mini-arrow" aria-hidden="true">›</span>
+                  <span class="mini-arrow" aria-hidden="true">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M9 6L15 12L9 18"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
                 </button>
               </article>
             </div>
@@ -747,43 +778,126 @@
               </div>
 
               <div class="mini-dashboard-wrap" aria-hidden="true">
+                <div class="mini-peek-left">
+                  <span class="mini-circle-btn">•••</span>
+                  <div class="mini-peek-bars">
+                    <span class="mini-peek-bar is-low"></span>
+                    <span class="mini-peek-bar is-high"></span>
+                    <svg viewBox="0 0 60 32" class="mini-peek-line">
+                      <path
+                        d="M2 28 C16 24, 24 14, 38 18 C48 21, 54 12, 58 14"
+                        fill="none"
+                        stroke="#e83e8c"
+                        stroke-width="1.6"
+                        stroke-dasharray="3 3"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
                 <div class="mini-trend-card">
                   <div class="mini-trend-head">
                     <span data-i18n="tools.unified.chartTitle">
                       Market Trends
                     </span>
-                    <strong data-i18n="tools.unified.chartPeak">$300k</strong>
+                    <span class="mini-circle-btn">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M15 3H21V9M9 21H3V15M21 3L14 10M3 21L10 14"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
                   </div>
-                  <svg viewBox="0 0 180 76" width="100%" height="76">
-                    <defs>
-                      <linearGradient id="pinkArea" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#c084fc" stop-opacity="0.45" />
-                        <stop offset="100%" stop-color="#c084fc" stop-opacity="0.02" />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M0 58 L28 38 L58 46 L90 22 L122 30 L152 14 L180 28 L180 76 L0 76 Z"
-                      fill="url(#pinkArea)"
-                    />
-                    <path
-                      d="M0 58 L28 38 L58 46 L90 22 L122 30 L152 14 L180 28"
-                      fill="none"
-                      stroke="#a855f7"
-                      stroke-width="2"
-                    />
-                  </svg>
+
+                  <div class="trend-chart-box">
+                    <span class="trend-year is-top">2026</span>
+                    <span class="trend-year is-bottom">2025</span>
+                    <span class="trend-peak-pill" data-i18n="tools.unified.chartPeak">
+                      $300k
+                    </span>
+
+                    <svg viewBox="0 0 220 112" class="trend-ribbon-svg">
+                      <defs>
+                        <linearGradient id="ribbonGrad" x1="0" y1="0" x2="1" y2="0">
+                          <stop offset="0%" stop-color="#f45b96" />
+                          <stop offset="55%" stop-color="#c456cf" />
+                          <stop offset="100%" stop-color="#845ef7" />
+                        </linearGradient>
+                        <pattern
+                          id="trendStripePattern"
+                          width="7"
+                          height="7"
+                          patternUnits="userSpaceOnUse"
+                          patternTransform="rotate(42)"
+                        >
+                          <rect width="3.3" height="7" fill="#ffffff" />
+                        </pattern>
+                        <mask id="trendRibbonMask">
+                          <polygon
+                            points="12,44 48,54 114,26 178,56 208,42 208,82 178,94 114,68 48,96 12,82"
+                            fill="url(#trendStripePattern)"
+                          />
+                        </mask>
+                      </defs>
+
+                      <rect
+                        width="220"
+                        height="112"
+                        fill="url(#ribbonGrad)"
+                        mask="url(#trendRibbonMask)"
+                      />
+                      <line
+                        x1="114"
+                        y1="22"
+                        x2="114"
+                        y2="110"
+                        stroke="#14161a"
+                        stroke-width="1.2"
+                        stroke-dasharray="3 3"
+                        opacity="0.55"
+                      />
+                      <rect x="10" y="42" width="4" height="4" fill="#14161a" />
+                      <rect x="46" y="52" width="4" height="4" fill="#14161a" />
+                      <rect x="112" y="24" width="4" height="4" fill="#14161a" />
+                      <rect x="176" y="54" width="4" height="4" fill="#14161a" />
+                      <rect x="206" y="40" width="4" height="4" fill="#14161a" />
+                      <rect x="10" y="80" width="4" height="4" fill="#14161a" />
+                      <rect x="46" y="94" width="4" height="4" fill="#14161a" />
+                      <rect x="112" y="66" width="4" height="4" fill="#14161a" />
+                      <rect x="176" y="92" width="4" height="4" fill="#14161a" />
+                      <rect x="206" y="80" width="4" height="4" fill="#14161a" />
+                    </svg>
+                  </div>
+
+                  <div class="trend-footer-row">
+                    <span>Jan</span>
+                    <span class="trend-scrubber">‹ ›</span>
+                    <span>Mar</span>
+                  </div>
                 </div>
 
                 <div class="mini-calendar-card">
                   <div
-                    style="font-size: 0.68rem; color: var(--text-muted)"
+                    class="cal-head-label"
                     data-i18n="tools.unified.weeklyTitle"
                   >
                     Weekly schedule
                   </div>
-                  <div class="mini-calendar-num">15</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted)">
-                    16 · 17
+                  <div class="cal-pill is-active">
+                    <span>Jan</span>
+                    <strong>15</strong>
+                  </div>
+                  <div class="cal-pill">
+                    <span>Jan</span>
+                    <strong>16</strong>
+                  </div>
+                  <div class="cal-pill is-faded">
+                    <span>Jan</span>
+                    <strong>17</strong>
                   </div>
                 </div>
               </div>
@@ -800,39 +914,63 @@
               </div>
 
               <div class="globe-stage">
-                <svg class="globe-svg" viewBox="0 0 200 180" aria-hidden="true">
-                  <circle
-                    cx="100"
-                    cy="92"
-                    r="68"
+                <svg class="globe-svg" viewBox="0 0 260 220" aria-hidden="true">
+                  <defs>
+                    <radialGradient id="globeGlow" cx="50%" cy="62%" r="48%">
+                      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.58" />
+                      <stop offset="65%" stop-color="#4c1d95" stop-opacity="0.22" />
+                      <stop offset="100%" stop-color="#14161b" stop-opacity="0" />
+                    </radialGradient>
+                  </defs>
+                  <circle cx="130" cy="126" r="106" fill="url(#globeGlow)" />
+                  <g
                     fill="none"
-                    stroke="rgba(167,139,250,0.4)"
-                    stroke-dasharray="2 5"
-                    stroke-width="1.5"
-                  />
-                  <ellipse
-                    cx="100"
-                    cy="92"
-                    rx="68"
-                    ry="26"
-                    fill="none"
-                    stroke="rgba(167,139,250,0.35)"
-                    stroke-dasharray="2 5"
-                  />
-                  <ellipse
-                    cx="100"
-                    cy="92"
-                    rx="32"
-                    ry="68"
-                    fill="none"
-                    stroke="rgba(167,139,250,0.35)"
-                    stroke-dasharray="2 5"
-                  />
+                    stroke="rgba(216, 206, 255, 0.24)"
+                    stroke-width="0.95"
+                  >
+                    <circle cx="130" cy="126" r="96" />
+                    <ellipse cx="130" cy="126" rx="96" ry="30" transform="rotate(-20 130 126)" />
+                    <ellipse cx="130" cy="126" rx="94" ry="52" transform="rotate(-20 130 126)" />
+                    <ellipse cx="130" cy="126" rx="88" ry="74" transform="rotate(-20 130 126)" />
+                    <ellipse cx="130" cy="126" rx="76" ry="92" transform="rotate(-20 130 126)" />
+                    <ellipse cx="130" cy="126" rx="22" ry="96" transform="rotate(-20 130 126)" />
+                    <ellipse cx="130" cy="126" rx="48" ry="96" transform="rotate(-20 130 126)" />
+                    <ellipse cx="130" cy="126" rx="72" ry="96" transform="rotate(-20 130 126)" />
+                    <ellipse cx="110" cy="70" rx="44" ry="16" transform="rotate(-20 110 70)" />
+                    <ellipse cx="102" cy="50" rx="24" ry="9" transform="rotate(-20 102 50)" />
+                  </g>
                 </svg>
 
-                <span class="collab-tag is-1">Robert Wilson</span>
-                <span class="collab-tag is-2">Jennifer Davis</span>
-                <span class="collab-tag is-3">Elizabeth Taylor</span>
+                <span class="collab-tag is-1">
+                  <img
+                    src="assets/images/avatar-robert.png"
+                    alt=""
+                    class="collab-avatar"
+                    width="24"
+                    height="24"
+                  />
+                  <span>Robert Wilson</span>
+                </span>
+                <span class="collab-tag is-2">
+                  <img
+                    src="assets/images/avatar-jennifer.png"
+                    alt=""
+                    class="collab-avatar"
+                    width="24"
+                    height="24"
+                  />
+                  <span>Jennifer Davis</span>
+                </span>
+                <span class="collab-tag is-3">
+                  <img
+                    src="assets/images/avatar-elizabeth.png"
+                    alt=""
+                    class="collab-avatar"
+                    width="24"
+                    height="24"
+                  />
+                  <span>Elizabeth Taylor</span>
+                </span>
               </div>
             </article>
 
@@ -910,80 +1048,177 @@
               </div>
 
               <div class="empire-widget">
-                <div
-                  class="empire-widget-title"
-                  data-i18n="tools.empire.widgetTitle"
-                >
-                  Lead Performing Agents
+                <div class="empire-widget-head">
+                  <span
+                    class="empire-widget-title"
+                    data-i18n="tools.empire.widgetTitle"
+                  >
+                    Lead Performing Agents
+                  </span>
+                  <span class="mini-circle-btn" aria-hidden="true">•••</span>
                 </div>
 
-                <div class="agent-row">
+                <div class="agent-card is-featured">
                   <div class="agent-row-top">
-                    <span>
+                    <span class="agent-user">
+                      <img
+                        src="assets/images/avatar-emily.png"
+                        alt=""
+                        class="agent-avatar"
+                        width="28"
+                        height="28"
+                      />
                       <span data-i18n="tools.empire.agent1Name">Emily Gray</span>
-                      <span
-                        class="agent-tag"
-                        data-i18n="tools.empire.agent1Tag"
-                      >
-                        Top
+                      <span class="agent-tag">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path
+                            d="M8 4H16V10C16 12.2 14.2 14 12 14C9.8 14 8 12.2 8 10V4ZM8 6H5V8.5C5 9.9 6.1 11 7.5 11H8M16 6H19V8.5C19 9.9 17.9 11 16.5 11H16M12 14V18M8.5 20H15.5"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span data-i18n="tools.empire.agent1Tag">Top</span>
                       </span>
                     </span>
-                    <strong data-i18n="tools.empire.agent1Value">$421,376</strong>
+                    <strong
+                      class="agent-value"
+                      data-i18n="tools.empire.agent1Value"
+                    >
+                      $421,376
+                    </strong>
                   </div>
-                  <div class="segment-bars" aria-hidden="true">
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar is-green"></span>
-                    <span class="segment-bar"></span>
-                    <span class="segment-bar"></span>
-                    <span class="segment-bar"></span>
-                    <span class="segment-bar"></span>
-                    <span class="segment-bar"></span>
-                    <span class="segment-bar"></span>
+
+                  <div class="empire-bars" aria-hidden="true">
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar is-green"></span>
+                    <span class="empire-bar"></span>
+                    <span class="empire-bar"></span>
+                    <span class="empire-bar"></span>
+                  </div>
+
+                  <div class="agent-foot">
+                    <span class="advisor-legend-group">
+                      <span class="advisor-legend-item">
+                        <span class="advisor-dot is-green" aria-hidden="true"></span>
+                        <span data-i18n="hero.closed">Closed</span>
+                      </span>
+                      <span class="advisor-legend-item">
+                        <span class="advisor-dot is-empty" aria-hidden="true"></span>
+                        <span data-i18n="hero.projected">Projected</span>
+                      </span>
+                    </span>
+
+                    <span class="advisor-stats-group">
+                      <span class="advisor-stat-item">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path
+                            d="M8.5 12.5L11 15L16.5 9.5M4 11L9 6L12 8.5L15 6L20 11L14.5 17.5C13.1 19 10.9 19 9.5 17.5L4 11Z"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <strong>12</strong>
+                      </span>
+                      <span class="advisor-stat-item">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <rect x="3" y="7" width="18" height="13" rx="2.5" stroke="currentColor" stroke-width="1.8" />
+                          <path d="M9 7V5C9 4.45 9.45 4 10 4H14C14.55 4 15 4.45 15 5V7M3 12H21" stroke="currentColor" stroke-width="1.8" />
+                        </svg>
+                        <strong>16</strong>
+                      </span>
+                    </span>
                   </div>
                 </div>
 
-                <div class="agent-row">
+                <div class="agent-card is-secondary">
                   <div class="agent-row-top">
-                    <span data-i18n="tools.empire.agent2Name">Bruce Walker</span>
-                    <strong data-i18n="tools.empire.agent2Value">$242,491</strong>
+                    <span class="agent-user">
+                      <img
+                        src="assets/images/avatar-bruce.png"
+                        alt=""
+                        class="agent-avatar"
+                        width="28"
+                        height="28"
+                      />
+                      <span data-i18n="tools.empire.agent2Name">Bruce Walker</span>
+                    </span>
+                    <strong
+                      class="agent-value"
+                      data-i18n="tools.empire.agent2Value"
+                    >
+                      $242,491
+                    </strong>
                   </div>
-                  <div class="segment-bars" aria-hidden="true">
-                    <span class="segment-bar is-blue"></span>
-                    <span class="segment-bar is-blue"></span>
-                    <span class="segment-bar is-blue"></span>
-                    <span class="segment-bar is-blue"></span>
-                    <span class="segment-bar is-blue"></span>
-                    <span class="segment-bar is-blue"></span>
-                    <span class="segment-bar is-blue"></span>
-                    <span class="segment-bar is-blue"></span>
-                    <span class="segment-bar is-blue"></span>
-                    <span class="segment-bar is-blue"></span>
-                    <span class="segment-bar is-blue"></span>
-                    <span class="segment-bar is-blue"></span>
-                    <span class="segment-bar is-blue"></span>
-                    <span class="segment-bar"></span>
-                    <span class="segment-bar"></span>
-                    <span class="segment-bar"></span>
-                    <span class="segment-bar"></span>
-                    <span class="segment-bar"></span>
-                    <span class="segment-bar"></span>
-                    <span class="segment-bar"></span>
-                    <span class="segment-bar"></span>
-                    <span class="segment-bar"></span>
+
+                  <div class="empire-bars" aria-hidden="true">
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar is-blue"></span>
+                    <span class="empire-bar"></span>
+                    <span class="empire-bar"></span>
+                    <span class="empire-bar"></span>
+                    <span class="empire-bar"></span>
+                    <span class="empire-bar"></span>
+                    <span class="empire-bar"></span>
+                    <span class="empire-bar"></span>
+                    <span class="empire-bar"></span>
+                    <span class="empire-bar"></span>
+                    <span class="empire-bar"></span>
+                    <span class="empire-bar"></span>
+                    <span class="empire-bar"></span>
+                  </div>
+
+                  <div class="agent-foot">
+                    <span class="advisor-legend-group">
+                      <span class="advisor-legend-item">
+                        <span class="advisor-dot is-blue" aria-hidden="true"></span>
+                        <span data-i18n="hero.closed">Closed</span>
+                      </span>
+                      <span class="advisor-legend-item">
+                        <span class="advisor-dot is-empty" aria-hidden="true"></span>
+                        <span data-i18n="hero.projected">Projected</span>
+                      </span>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1005,8 +1240,8 @@
                 <img
                   src="assets/images/logo-mark.svg"
                   alt=""
-                  width="30"
-                  height="30"
+                  width="32"
+                  height="32"
                 />
               </span>
               <span data-i18n="footer.brandName">auravilla</span>
@@ -1015,9 +1250,23 @@
               From property search to portfolio growth.
             </p>
             <div class="social-row">
-              <a href="#home" class="social-btn" aria-label="X">𝕏</a>
-              <a href="#home" class="social-btn" aria-label="Instagram">◎</a>
-              <a href="#home" class="social-btn" aria-label="Facebook">f</a>
+              <a href="#home" class="social-btn" aria-label="X">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="#home" class="social-btn" aria-label="Instagram">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2" />
+                  <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
+                  <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+                </svg>
+              </a>
+              <a href="#home" class="social-btn" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M13.5 21v-7.5H16l.5-3h-3V8.6c0-.87.3-1.46 1.56-1.46H16.6V4.46c-.27-.04-1.2-.11-2.28-.11-2.26 0-3.82 1.38-3.82 3.92V10.5H8v3h2.5V21h3z"/>
+                </svg>
+              </a>
             </div>
           </div>
 
