@@ -1,0 +1,265 @@
+{
+  "meta": {
+    "title": "AuraVilla | Architectural Houses, Villas & Luxury Real Estate",
+    "description": "AuraVilla curates architectural villas, private residences, and bespoke penthouses designed for timeless living and private acquisition."
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "switchToDark": "Switch to dark theme",
+    "switchToLight": "Switch to light theme"
+  },
+  "nav": {
+    "collections": "Signature",
+    "properties": "Residences",
+    "architecture": "Architecture",
+    "process": "Acquisition",
+    "contact": "Advisory",
+    "cta": "Book Viewing",
+    "menuOpen": "Open navigation menu",
+    "menuClose": "Close navigation menu"
+  },
+  "hero": {
+    "eyebrow": "PRIVATE ARCHITECTURAL REAL ESTATE",
+    "title": "Timeless Villas & Modern Residences",
+    "subtitle": "Discover curated architectural houses, oceanfront villas, and sky penthouses crafted with natural limestone, glass, and enduring proportions.",
+    "ctaPrimary": "Explore Residences",
+    "ctaSecondary": "Private Consultation",
+    "stats": {
+      "residencesValue": "24+",
+      "residencesLabel": "Curated Residences",
+      "districtsValue": "06",
+      "districtsLabel": "Prime Enclaves",
+      "privateValue": "100%",
+      "privateLabel": "Private Viewings"
+    },
+    "search": {
+      "typeLabel": "Property Type",
+      "typeAll": "All Types",
+      "typeVilla": "Villa",
+      "typeHouse": "Modern House",
+      "typePenthouse": "Penthouse",
+      "bedsLabel": "Bedrooms",
+      "bedsAny": "Any Bedrooms",
+      "beds3": "3+ Bedrooms",
+      "beds4": "4+ Bedrooms",
+      "beds5": "5+ Bedrooms",
+      "submit": "Find Residences"
+    }
+  },
+  "featured": {
+    "eyebrow": "SIGNATURE RESIDENCE",
+    "title": "Solstice Cliffside Villa",
+    "subtitle": "A cantilevered limestone and floor-to-ceiling glass sanctuary suspended above the coastline, balancing open horizon views with sheltered courtyard calm.",
+    "cta": "Inspect Residence",
+    "specs": {
+      "areaLabel": "Living Area",
+      "areaValue": "680 m²",
+      "bedsLabel": "Bedrooms",
+      "bedsValue": "5 Suites",
+      "poolLabel": "Pool",
+      "poolValue": "22m Infinity",
+      "priceLabel": "Guide Price",
+      "priceValue": "On Request"
+    }
+  },
+  "properties": {
+    "eyebrow": "CURATED COLLECTION",
+    "title": "Residences for Private Acquisition",
+    "subtitle": "Every property in the AuraVilla portfolio is vetted for architectural provenance, natural daylight orientation, and long-term land value.",
+    "filters": {
+      "all": "All Residences",
+      "villa": "Villas",
+      "house": "Modern Houses",
+      "penthouse": "Penthouses",
+      "bedsLabel": "Bedrooms",
+      "sortLabel": "Sort By"
+    },
+    "sort": {
+      "featured": "Featured First",
+      "areaDesc": "Largest Area",
+      "bedsDesc": "Most Bedrooms"
+    },
+    "badges": {
+      "signature": "Signature",
+      "new": "New Listing",
+      "limited": "Private Release"
+    },
+    "specs": {
+      "beds": "Beds",
+      "baths": "Baths",
+      "area": "m²"
+    },
+    "viewDetails": "View Residence",
+    "emptyState": "No residences match the selected criteria. Adjust your filters to view the full collection.",
+    "resetFilter": "Reset Filters",
+    "items": {
+      "solstice-cliff-villa": {
+        "title": "Solstice Cliffside Villa",
+        "location": "Coastal Ridge Enclave",
+        "price": "Upon Inquiry",
+        "summary": "Cantilevered oceanfront villa with double-height glazing, infinity pool, and seamless indoor-outdoor limestone terraces.",
+        "description": "Designed around uninterrupted coastal light, Solstice Cliffside Villa pairs monolithic white concrete planes with warm oak joinery and floor-to-ceiling low-iron glass. Three terraced levels step naturally toward a heated saltwater infinity pool and private sunset lounge.",
+        "features": [
+          "22-meter heated saltwater infinity pool",
+          "Double-height ocean-view great room",
+          "Private wellness suite with sauna & plunge",
+          "Smart climate, lighting & acoustic glazing"
+        ]
+      },
+      "courtyard-travertine-house": {
+        "title": "Courtyard Travertine House",
+        "location": "Botanical Reserve District",
+        "price": "Upon Inquiry",
+        "summary": "Minimalist modern house organized around a tranquil reflection pond, oak timber louvers, and natural stone galleries.",
+        "description": "Built for quiet privacy in a lush residential enclave, this architectural house frames an interior reflection courtyard at its heart. Motorized oak louvers filter afternoon sunlight across honed travertine floors and custom gallery walls.",
+        "features": [
+          "Central reflection pond & Zen garden courtyard",
+          "Honed Roman travertine facade & flooring",
+          "Chef's monolithic stone kitchen & pantry",
+          "3-car subterranean gallery garage"
+        ]
+      },
+      "pinecrest-glass-pavilion": {
+        "title": "Pinecrest Glass Pavilion",
+        "location": "Highland Forest Sanctuary",
+        "price": "Upon Inquiry",
+        "summary": "Elevated hillside glass pavilion suspended among mature pines with a wrap-around timber deck and fireplace lounge.",
+        "description": "Anchored into a gentle wooded slope, Pinecrest Glass Pavilion floats quietly above the canopy. Expansive structural glass walls dissolve the boundary between the travertine living pavilion and the surrounding pine forest.",
+        "features": [
+          "Panoramic 270-degree hillside glass facade",
+          "Cantilevered teak & limestone viewing deck",
+          "Sunken travertine hearth & wine room",
+          "Geothermal radiant floor heating"
+        ]
+      },
+      "skyline-aura-penthouse": {
+        "title": "Skyline Aura Penthouse",
+        "location": "Central Waterfront Tower",
+        "price": "Upon Inquiry",
+        "summary": "Full-floor sky villa featuring a private sunken terrace lounge, reflective water court, and 360-degree horizon views.",
+        "description": "Occupying the entire crown of an architectural landmark, Skyline Aura Penthouse brings villa-scale proportions to elevated urban living. Private elevator access opens into a light-filled gallery extending onto a landscaped rooftop terrace.",
+        "features": [
+          "Private direct-keyed elevator lobby",
+          "Landscaped wrap-around sky terrace & sunken lounge",
+          "Bespoke Italian millwork & concealed kitchen",
+          "24/7 concierge & private climate-controlled storage"
+        ]
+      },
+      "horizon-infinity-estate": {
+        "title": "Horizon Infinity Estate",
+        "location": "Peninsula South Shore",
+        "price": "Upon Inquiry",
+        "summary": "Twilight-oriented contemporary estate featuring twin guest pavilions, sculptural water mirror, and private garden lawn.",
+        "description": "Conceived as a multi-generational compound, Horizon Infinity Estate pairs a dramatic main residence with two independent guest pavilions linked by covered stone colonnades and manicured reflecting pools.",
+        "features": [
+          "Main residence plus two detached guest pavilions",
+          "Outdoor summer kitchen & pergola dining terrace",
+          "Private home cinema & acoustic study",
+          "Solar-integrated roof & rainwater harvesting"
+        ]
+      },
+      "atrium-minimal-residence": {
+        "title": "Atrium Minimal Residence",
+        "location": "Heritage Park Avenue",
+        "price": "Upon Inquiry",
+        "summary": "Double-height interior sanctuary with a monolithic travertine fireplace, slatted oak ceiling, and private garden sanctuary.",
+        "description": "Combining urban convenience with serene residential proportions, Atrium Minimal Residence centers on a sunlit double-height living atrium. Custom bronze hardware, fluted timber paneling, and quiet courtyard glazing define every room.",
+        "features": [
+          "Double-height sunlit living atrium",
+          "Monolithic travertine fireplace centerpiece",
+          "Private landscaped rear garden & plunge pool",
+          "Dedicated architectural studio / library"
+        ]
+      }
+    }
+  },
+  "modal": {
+    "close": "Close residence details",
+    "specsTitle": "Key Specifications",
+    "featuresTitle": "Architectural Highlights",
+    "scheduleCta": "Schedule Private Viewing",
+    "areaUnit": "m²"
+  },
+  "architecture": {
+    "eyebrow": "ARCHITECTURAL PHILOSOPHY",
+    "title": "Built with Restraint, Material Honesty & Light",
+    "subtitle": "We represent homes where architecture elevates daily life—favoring enduring stone, warm timber, passive orientation, and spatial calm over fleeting trends.",
+    "pillars": {
+      "0": {
+        "title": "01 / Material Permanence",
+        "desc": "Honed limestone, architectural concrete, brushed bronze, and sustainably sourced oak selected to age gracefully over decades."
+      },
+      "1": {
+        "title": "02 / Daylight & Orientation",
+        "desc": "Every floor plan is evaluated for cross-ventilation, solar shading, and calm sightlines linking interior rooms to gardens or horizon views."
+      },
+      "2": {
+        "title": "03 / Discreet Ownership",
+        "desc": "Private gated thresholds, acoustic glazing, and verified legal due diligence ensure effortless acquisition and peaceful long-term living."
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "ACQUISITION JOURNEY",
+    "title": "A Discreet Path to Ownership",
+    "subtitle": "From private dossier review to architectural walkthroughs and legal closing, our advisory team coordinates every milestone.",
+    "steps": {
+      "0": {
+        "title": "Private Brief",
+        "desc": "Share your preferred location, architectural style, spatial requirements, and acquisition timeline."
+      },
+      "1": {
+        "title": "Curated Shortlist",
+        "desc": "Receive confidential dossiers with floor plans, sun studies, material specs, and transparent pricing."
+      },
+      "2": {
+        "title": "Private Walkthrough",
+        "desc": "Experience each residence at your own pace during an unhurried, appointment-only architectural tour."
+      },
+      "3": {
+        "title": "Seamless Closing",
+        "desc": "Independent legal, technical, and title verification support through handover and post-closing care."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "PRIVATE ADVISORY",
+    "title": "Request a Dossier or Schedule a Viewing",
+    "subtitle": "Connect with an AuraVilla specialist to receive floor plans, pricing guides, or arrange an appointment-only visit.",
+    "hoursLabel": "Advisory Hours",
+    "hoursValue": "Mon – Sun · 09:00 – 19:00",
+    "emailLabel": "Advisory Email",
+    "phoneLabel": "Private Line",
+    "officeLabel": "Showroom",
+    "officeValue": "Private Showroom — By Appointment",
+    "form": {
+      "nameLabel": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "phoneLabel": "Phone / WhatsApp (Optional)",
+      "phonePlaceholder": "+1 (000) 000-0000",
+      "propertyLabel": "Residence of Interest",
+      "propertyPlaceholder": "Select a residence",
+      "propertyGeneral": "General Portfolio Consultation",
+      "messageLabel": "Preferred Dates & Notes",
+      "messagePlaceholder": "Share preferred viewing dates, layout needs, or questions...",
+      "submit": "Request Private Viewing"
+    },
+    "validation": {
+      "nameRequired": "Please enter your full name.",
+      "emailInvalid": "Please enter a valid email address.",
+      "propertyRequired": "Please select a residence or consultation option."
+    },
+    "successMessage": "Thank you. Your private inquiry has been recorded in this preview session. Our advisory desk will follow up regarding your selected residence.",
+    "demoNote": "Static preview form — submissions are validated locally in your browser."
+  },
+  "footer": {
+    "tagline": "Architectural houses, villas & private real estate curated for enduring living.",
+    "quickLinks": "Navigation",
+    "languages": "Language",
+    "copyright": "© 2026 AuraVilla. Real Estate Showcase.",
+    "backToTop": "Back to top"
+  }
+}

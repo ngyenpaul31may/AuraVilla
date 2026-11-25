@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AuraVilla | Architectural Houses, Villas &amp; Luxury Real Estate</title>
+    <meta
+      name="description"
+      content="AuraVilla curates architectural villas, private residences, and bespoke penthouses designed for timeless living and private acquisition."
+    />
+    <meta
+      property="og:title"
+      content="AuraVilla | Architectural Houses, Villas &amp; Luxury Real Estate"
+    />
+    <meta
+      property="og:description"
+      content="AuraVilla curates architectural villas, private residences, and bespoke penthouses designed for timeless living and private acquisition."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem("auravilla_theme");
+          const theme =
+            saved === "light" || saved === "dark"
+              ? saved
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        } catch {}
+      })();
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/i18n.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- =====================================================================
+         1. Sticky Header
+         ===================================================================== -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a href="#" class="brand-mark">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>AURAVILLA</span>
+        </a>
+
+        <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+          <a href="#featured" data-i18n="nav.collections">Signature</a>
+          <a href="#properties" data-i18n="nav.properties">Residences</a>
+          <a href="#architecture" data-i18n="nav.architecture">Architecture</a>
+          <a href="#process" data-i18n="nav.process">Acquisition</a>
+          <a href="#contact" data-i18n="nav.contact">Advisory</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="lang-switcher" role="group" aria-label="Language switcher">
+            <button
+              type="button"
+              class="lang-btn is-active"
+              data-lang-btn="en"
+              aria-pressed="true"
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              class="lang-btn"
+              data-lang-btn="vi"
+              aria-pressed="false"
+            >
+              VI
+            </button>
+          </div>
+
+          <button
+            type="button"
+            class="theme-toggle"
+            data-theme-toggle
+            aria-pressed="false"
+            aria-label="Switch to dark theme"
+          >
+            <span data-theme-label>Dark</span>
+          </button>
+
+          <a href="#contact" class="btn btn-primary header-cta" data-i18n="nav.cta">
+            Book Viewing
+          </a>
+
+          <button
+            type="button"
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Open navigation menu"
+            data-i18n-aria="nav.menuOpen"
+          >
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===================================================================
+           2. Hero Section & Quick Search Bar
+           =================================================================== -->
+      <section class="hero-section">
+        <div class="hero-backdrop" aria-hidden="true">
+          <img src="assets/images/hero-villa.png" alt="" />
+        </div>
+
+        <div class="container hero-content">
+          <div class="hero-top-grid">
+            <div>
+              <span class="eyebrow hero-eyebrow" data-i18n="hero.eyebrow">
+                PRIVATE ARCHITECTURAL REAL ESTATE
+              </span>
+              <h1 class="hero-title" data-i18n="hero.title">
+                Timeless Villas &amp; Modern Residences
+              </h1>
+              <p class="hero-subtitle" data-i18n="hero.subtitle">
+                Discover curated architectural houses, oceanfront villas, and sky
+                penthouses crafted with natural limestone, glass, and enduring
+                proportions.
+              </p>
+              <div class="hero-cta-group">
+                <a
+                  href="#properties"
+                  class="btn btn-bronze"
+                  data-i18n="hero.ctaPrimary"
+                >
+                  Explore Residences
+                </a>
+                <a
+                  href="#contact"
+                  class="btn btn-ghost-light"
+                  data-i18n="hero.ctaSecondary"
+                >
+                  Private Consultation
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <strong data-i18n="hero.stats.residencesValue">24+</strong>
+                <span data-i18n="hero.stats.residencesLabel">Curated Residences</span>
+              </div>
+              <div class="metric-item">
+                <strong data-i18n="hero.stats.districtsValue">06</strong>
+                <span data-i18n="hero.stats.districtsLabel">Prime Enclaves</span>
+              </div>
+              <div class="metric-item">
+                <strong data-i18n="hero.stats.privateValue">100%</strong>
+                <span data-i18n="hero.stats.privateLabel">Private Viewings</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="hero-search-bar" id="hero-search-form">
+            <div class="search-field">
+              <label for="hero-type" data-i18n="hero.search.typeLabel">
+                Property Type
+              </label>
+              <select id="hero-type" name="type">
+                <option value="all" data-i18n="hero.search.typeAll">
+                  All Types
+                </option>
+                <option value="villa" data-i18n="hero.search.typeVilla">
+                  Villa
+                </option>
+                <option value="house" data-i18n="hero.search.typeHouse">
+                  Modern House
+                </option>
+                <option value="penthouse" data-i18n="hero.search.typePenthouse">
+                  Penthouse
+                </option>
+              </select>
+            </div>
+
+            <div class="search-field">
+              <label for="hero-beds" data-i18n="hero.search.bedsLabel">
+                Bedrooms
+              </label>
+              <select id="hero-beds" name="beds">
+                <option value="0" data-i18n="hero.search.bedsAny">
+                  Any Bedrooms
+                </option>
+                <option value="3" data-i18n="hero.search.beds3">
+                  3+ Bedrooms
+                </option>
+                <option value="4" data-i18n="hero.search.beds4">
+                  4+ Bedrooms
+                </option>
+                <option value="5" data-i18n="hero.search.beds5">
+                  5+ Bedrooms
+                </option>
+              </select>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+              data-i18n="hero.search.submit"
+            >
+              Find Residences
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           3. Featured Signature Residence
+           =================================================================== -->
+      <section class="section-pad" id="featured">
+        <div class="container featured-grid reveal">
+          <div class="featured-media">
+            <img
+              src="assets/images/property-cliffside.png"
+              alt="Solstice Cliffside Villa oceanfront facade"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div>
+            <span class="eyebrow" data-i18n="featured.eyebrow">
+              SIGNATURE RESIDENCE
+            </span>
+            <h2 class="section-heading" data-i18n="featured.title">
+              Solstice Cliffside Villa
+            </h2>
+            <p class="section-subtitle" data-i18n="featured.subtitle">
+              A cantilevered limestone and floor-to-ceiling glass sanctuary
+              suspended above the coastline, balancing open horizon views with
+              sheltered courtyard calm.
+            </p>
+
+            <div class="featured-specs-grid">
+              <div class="featured-spec-item">
+                <span data-i18n="featured.specs.areaLabel">Living Area</span>
+                <strong data-i18n="featured.specs.areaValue">680 m²</strong>
+              </div>
+              <div class="featured-spec-item">
+                <span data-i18n="featured.specs.bedsLabel">Bedrooms</span>
+                <strong data-i18n="featured.specs.bedsValue">5 Suites</strong>
+              </div>
+              <div class="featured-spec-item">
+                <span data-i18n="featured.specs.poolLabel">Pool</span>
+                <strong data-i18n="featured.specs.poolValue">22m Infinity</strong>
+              </div>
+              <div class="featured-spec-item">
+                <span data-i18n="featured.specs.priceLabel">Guide Price</span>
+                <strong data-i18n="featured.specs.priceValue">On Request</strong>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="featured-inspect-btn"
+              data-i18n="featured.cta"
+            >
+              Inspect Residence
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           4. Curated Properties Collection
+           =================================================================== -->
+      <section class="section-pad section-subtle" id="properties">
+        <div class="container">
+          <div class="section-header-row reveal">
+            <div>
+              <span class="eyebrow" data-i18n="properties.eyebrow">
+                CURATED COLLECTION
+              </span>
+              <h2 class="section-heading" data-i18n="properties.title">
+                Residences for Private Acquisition
+              </h2>
+              <p class="section-subtitle" data-i18n="properties.subtitle">
+                Every property in the AuraVilla portfolio is vetted for
+                architectural provenance, natural daylight orientation, and
+                long-term land value.
+              </p>
+            </div>
+          </div>
+
+          <div class="filter-toolbar reveal">
+            <div class="filter-tabs" role="group" aria-label="Property categories">
+              <button
+                type="button"
+                class="filter-tab is-active"
+                data-filter-type="all"
+                aria-pressed="true"
+                data-i18n="properties.filters.all"
+              >
+                All Residences
+              </button>
+              <button
+                type="button"
+                class="filter-tab"
+                data-filter-type="villa"
+                aria-pressed="false"
+                data-i18n="properties.filters.villa"
+              >
+                Villas
+              </button>
+              <button
+                type="button"
+                class="filter-tab"
+                data-filter-type="house"
+                aria-pressed="false"
+                data-i18n="properties.filters.house"
+              >
+                Modern Houses
+              </button>
+              <button
+                type="button"
+                class="filter-tab"
+                data-filter-type="penthouse"
+                aria-pressed="false"
+                data-i18n="properties.filters.penthouse"
+              >
+                Penthouses
+              </button>
+            </div>
+
+            <div class="filter-selects">
+              <div class="filter-control">
+                <label
+                  for="filter-beds"
+                  data-i18n="properties.filters.bedsLabel"
+                >
+                  Bedrooms
+                </label>
+                <select id="filter-beds">
+                  <option value="0" data-i18n="hero.search.bedsAny">
+                    Any Bedrooms
+                  </option>
+                  <option value="3" data-i18n="hero.search.beds3">
+                    3+ Bedrooms
+                  </option>
+                  <option value="4" data-i18n="hero.search.beds4">
+                    4+ Bedrooms
+                  </option>
+                  <option value="5" data-i18n="hero.search.beds5">
+                    5+ Bedrooms
+                  </option>
+                </select>
+              </div>
+
+              <div class="filter-control">
+                <label
+                  for="filter-sort"
+                  data-i18n="properties.filters.sortLabel"
+                >
+                  Sort By
+                </label>
+                <select id="filter-sort">
+                  <option value="featured" data-i18n="properties.sort.featured">
+                    Featured First
+                  </option>
+                  <option value="areaDesc" data-i18n="properties.sort.areaDesc">
+                    Largest Area
+                  </option>
+                  <option value="bedsDesc" data-i18n="properties.sort.bedsDesc">
+                    Most Bedrooms
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="properties-grid" id="properties-grid"></div>
+
+          <div class="properties-empty" id="properties-empty" hidden>
+            <p data-i18n="properties.emptyState">
+              No residences match the selected criteria. Adjust your filters to
+              view the full collection.
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="reset-filters-btn"
+              data-i18n="properties.resetFilter"
+            >
+              Reset Filters
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           5. Architectural Philosophy (Obsidian Band)
+           =================================================================== -->
+      <section class="section-pad section-dark" id="architecture">
+        <div class="container">
+          <div class="architecture-grid reveal">
+            <div>
+              <span class="eyebrow" data-i18n="architecture.eyebrow">
+                ARCHITECTURAL PHILOSOPHY
+              </span>
+              <h2 class="section-heading" data-i18n="architecture.title">
+                Built with Restraint, Material Honesty &amp; Light
+              </h2>
+              <p class="section-subtitle" data-i18n="architecture.subtitle">
+                We represent homes where architecture elevates daily life—favoring
+                enduring stone, warm timber, passive orientation, and spatial calm
+                over fleeting trends.
+              </p>
+            </div>
+
+            <div class="architecture-media">
+              <img
+                src="assets/images/interior-living.png"
+                alt="Double-height minimalist travertine living space"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+
+          <div class="pillars-grid reveal">
+            <article class="pillar-card">
+              <h3 data-i18n="architecture.pillars.0.title">
+                01 / Material Permanence
+              </h3>
+              <p data-i18n="architecture.pillars.0.desc">
+                Honed limestone, architectural concrete, brushed bronze, and
+                sustainably sourced oak selected to age gracefully over decades.
+              </p>
+            </article>
+
+            <article class="pillar-card">
+              <h3 data-i18n="architecture.pillars.1.title">
+                02 / Daylight &amp; Orientation
+              </h3>
+              <p data-i18n="architecture.pillars.1.desc">
+                Every floor plan is evaluated for cross-ventilation, solar shading,
+                and calm sightlines linking interior rooms to gardens or horizon
+                views.
+              </p>
+            </article>
+
+            <article class="pillar-card">
+              <h3 data-i18n="architecture.pillars.2.title">
+                03 / Discreet Ownership
+              </h3>
+              <p data-i18n="architecture.pillars.2.desc">
+                Private gated thresholds, acoustic glazing, and verified legal due
+                diligence ensure effortless acquisition and peaceful long-term
+                living.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           6. Acquisition Journey
+           =================================================================== -->
+      <section class="section-pad" id="process">
+        <div class="container">
+          <div class="reveal">
+            <span class="eyebrow" data-i18n="process.eyebrow">
+              ACQUISITION JOURNEY
+            </span>
+            <h2 class="section-heading" data-i18n="process.title">
+              A Discreet Path to Ownership
+            </h2>
+            <p class="section-subtitle" data-i18n="process.subtitle">
+              From private dossier review to architectural walkthroughs and legal
+              closing, our advisory team coordinates every milestone.
+            </p>
+          </div>
+
+          <div class="process-grid reveal">
+            <article class="process-card">
+              <span class="process-number">01</span>
+              <h3 data-i18n="process.steps.0.title">Private Brief</h3>
+              <p data-i18n="process.steps.0.desc">
+                Share your preferred location, architectural style, spatial
+                requirements, and acquisition timeline.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <span class="process-number">02</span>
+              <h3 data-i18n="process.steps.1.title">Curated Shortlist</h3>
+              <p data-i18n="process.steps.1.desc">
+                Receive confidential dossiers with floor plans, sun studies,
+                material specs, and transparent pricing.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <span class="process-number">03</span>
+              <h3 data-i18n="process.steps.2.title">Private Walkthrough</h3>
+              <p data-i18n="process.steps.2.desc">
+                Experience each residence at your own pace during an unhurried,
+                appointment-only architectural tour.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <span class="process-number">04</span>
+              <h3 data-i18n="process.steps.3.title">Seamless Closing</h3>
+              <p data-i18n="process.steps.3.desc">
+                Independent legal, technical, and title verification support
+                through handover and post-closing care.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           7. Private Advisory & Viewing Form
+           =================================================================== -->
+      <section class="section-pad section-subtle" id="contact">
+        <div class="container contact-grid reveal">
+          <div>
+            <span class="eyebrow" data-i18n="contact.eyebrow">
+              PRIVATE ADVISORY
+            </span>
+            <h2 class="section-heading" data-i18n="contact.title">
+              Request a Dossier or Schedule a Viewing
+            </h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">
+              Connect with an AuraVilla specialist to receive floor plans, pricing
+              guides, or arrange an appointment-only visit.
+            </p>
+
+            <div class="contact-meta-list">
+              <div class="contact-meta-item">
+                <span data-i18n="contact.hoursLabel">Advisory Hours</span>
+                <strong data-i18n="contact.hoursValue">
+                  Mon – Sun · 09:00 – 19:00
+                </strong>
+              </div>
+              <div class="contact-meta-item">
+                <span data-i18n="contact.emailLabel">Advisory Email</span>
+                <a href="mailto:advisory@auravilla.example">
+                  advisory@auravilla.example
+                </a>
+              </div>
+              <div class="contact-meta-item">
+                <span data-i18n="contact.phoneLabel">Private Line</span>
+                <a href="tel:+10000000000">+1 (000) 000-0000</a>
+              </div>
+              <div class="contact-meta-item">
+                <span data-i18n="contact.officeLabel">Showroom</span>
+                <strong data-i18n="contact.officeValue">
+                  Private Showroom — By Appointment
+                </strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="inquiry-card">
+            <form id="inquiry-form" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="inquiry-name" data-i18n="contact.form.nameLabel">
+                    Full Name
+                  </label>
+                  <input
+                    id="inquiry-name"
+                    name="name"
+                    type="text"
+                    required
+                    aria-describedby="error-name"
+                    placeholder="Enter your full name"
+                    data-i18n-placeholder="contact.form.namePlaceholder"
+                  />
+                  <span class="field-error" id="error-name" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="inquiry-email" data-i18n="contact.form.emailLabel">
+                    Email Address
+                  </label>
+                  <input
+                    id="inquiry-email"
+                    name="email"
+                    type="email"
+                    required
+                    aria-describedby="error-email"
+                    placeholder="you@example.com"
+                    data-i18n-placeholder="contact.form.emailPlaceholder"
+                  />
+                  <span class="field-error" id="error-email" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="inquiry-phone" data-i18n="contact.form.phoneLabel">
+                    Phone / WhatsApp (Optional)
+                  </label>
+                  <input
+                    id="inquiry-phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+1 (000) 000-0000"
+                    data-i18n-placeholder="contact.form.phonePlaceholder"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label
+                    for="inquiry-property"
+                    data-i18n="contact.form.propertyLabel"
+                  >
+                    Residence of Interest
+                  </label>
+                  <select
+                    id="inquiry-property"
+                    name="property"
+                    required
+                    aria-describedby="error-property"
+                  >
+                    <option
+                      value=""
+                      data-i18n="contact.form.propertyPlaceholder"
+                    >
+                      Select a residence
+                    </option>
+                    <option
+                      value="general"
+                      data-i18n="contact.form.propertyGeneral"
+                    >
+                      General Portfolio Consultation
+                    </option>
+                  </select>
+                  <span
+                    class="field-error"
+                    id="error-property"
+                    aria-live="polite"
+                  ></span>
+                </div>
+
+                <div class="form-group is-full">
+                  <label
+                    for="inquiry-message"
+                    data-i18n="contact.form.messageLabel"
+                  >
+                    Preferred Dates &amp; Notes
+                  </label>
+                  <textarea
+                    id="inquiry-message"
+                    name="message"
+                    rows="4"
+                    placeholder="Share preferred viewing dates, layout needs, or questions..."
+                    data-i18n-placeholder="contact.form.messagePlaceholder"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  data-i18n="contact.form.submit"
+                >
+                  Request Private Viewing
+                </button>
+                <p class="form-demo-note" data-i18n="contact.demoNote">
+                  Static preview form — submissions are validated locally in your
+                  browser.
+                </p>
+              </div>
+
+              <div
+                class="form-status"
+                id="inquiry-status"
+                role="status"
+                aria-live="polite"
+                hidden
+              ></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================================
+         8. Footer
+         ===================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">AURAVILLA</div>
+            <p class="footer-tagline" data-i18n="footer.tagline">
+              Architectural houses, villas &amp; private real estate curated for
+              enduring living.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="footer-heading" data-i18n="footer.quickLinks">
+              Navigation
+            </h2>
+            <ul class="footer-links">
+              <li><a href="#featured" data-i18n="nav.collections">Signature</a></li>
+              <li><a href="#properties" data-i18n="nav.properties">Residences</a></li>
+              <li><a href="#architecture" data-i18n="nav.architecture">Architecture</a></li>
+              <li><a href="#process" data-i18n="nav.process">Acquisition</a></li>
+              <li><a href="#contact" data-i18n="nav.contact">Advisory</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="footer-heading" data-i18n="footer.languages">
+              Language
+            </h2>
+            <div
+              class="lang-switcher footer-lang-switcher"
+              role="group"
+              aria-label="Language switcher"
+            >
+              <button
+                type="button"
+                class="lang-btn is-active"
+                data-lang-btn="en"
+                aria-pressed="true"
+              >
+                EN
+              </button>
+              <button
+                type="button"
+                class="lang-btn"
+                data-lang-btn="vi"
+                aria-pressed="false"
+              >
+                VI
+              </button>
+            </div>
+            <div>
+              <button
+                type="button"
+                class="theme-toggle footer-theme-toggle"
+                data-theme-toggle
+                aria-pressed="false"
+                aria-label="Switch to dark theme"
+              >
+                <span data-theme-label>Dark</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span data-i18n="footer.copyright">
+            © 2026 AuraVilla. Real Estate Showcase.
+          </span>
+          <a href="#contact" data-i18n="nav.cta">Book Viewing</a>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      type="button"
+      class="back-to-top"
+      id="back-to-top"
+      aria-label="Back to top"
+      data-i18n-aria="footer.backToTop"
+    >
+      ↑
+    </button>
+
+    <!-- =====================================================================
+         9. Property Detail Modal
+         ===================================================================== -->
+    <div
+      class="modal-backdrop"
+      id="property-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      hidden
+    >
+      <div class="modal-dialog">
+        <button
+          type="button"
+          class="modal-close"
+          id="modal-close-btn"
+          aria-label="Close residence details"
+          data-i18n-aria="modal.close"
+        >
+          ×
+        </button>
+
+        <div class="modal-media">
+          <img id="modal-image" src="" alt="" />
+          <span class="property-badge" id="modal-badge"></span>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span id="modal-location"></span>
+            <strong id="modal-price"></strong>
+          </div>
+
+          <h2 class="modal-title" id="modal-title"></h2>
+          <p class="modal-desc" id="modal-description"></p>
+
+          <div>
+            <h3 class="modal-subheading" data-i18n="modal.specsTitle">
+              Key Specifications
+            </h3>
+            <div class="modal-specs" id="modal-specs"></div>
+          </div>
+
+          <div>
+            <h3 class="modal-subheading" data-i18n="modal.featuresTitle">
+              Architectural Highlights
+            </h3>
+            <ul class="modal-features" id="modal-features"></ul>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="modal-schedule-btn"
+            data-i18n="modal.scheduleCta"
+          >
+            Schedule Private Viewing
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
