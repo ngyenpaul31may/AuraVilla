@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -454,7 +454,24 @@
               >
                 <div class="insight-tab-head">
                   <span class="insight-num" data-i18n="insights.tabs.0.num">01</span>
-                  <span class="insight-icon-box" aria-hidden="true">↗</span>
+                  <span class="insight-icon-box" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M4 17L9.5 11.5L13.5 15L20 7.5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15.5 7.5H20V12"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
                   <span
                     class="insight-tab-title"
                     data-i18n="insights.tabs.0.title"
@@ -482,7 +499,23 @@
               >
                 <div class="insight-tab-head">
                   <span class="insight-num" data-i18n="insights.tabs.1.num">02</span>
-                  <span class="insight-icon-box" aria-hidden="true">▮▮</span>
+                  <span class="insight-icon-box" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M5 5V19H19"
+                        stroke="currentColor"
+                        stroke-width="1.9"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M9.5 15V12M13.5 15V8.5M17.5 15V11"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
                   <span
                     class="insight-tab-title"
                     data-i18n="insights.tabs.1.title"
@@ -510,7 +543,16 @@
               >
                 <div class="insight-tab-head">
                   <span class="insight-num" data-i18n="insights.tabs.2.num">03</span>
-                  <span class="insight-icon-box" aria-hidden="true">✦</span>
+                  <span class="insight-icon-box" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M12 4L14.2 9.8L20 12L14.2 14.2L12 20L9.8 14.2L4 12L9.8 9.8L12 4Z"
+                        stroke="currentColor"
+                        stroke-width="1.9"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
                   <span
                     class="insight-tab-title"
                     data-i18n="insights.tabs.2.title"
@@ -536,7 +578,7 @@
               <div class="revenue-card">
                 <div class="revenue-top">
                   <span id="insight-metric-title">Revenue</span>
-                  <span aria-hidden="true">…</span>
+                  <span class="revenue-more-btn" aria-hidden="true">•••</span>
                 </div>
                 <div class="revenue-value" id="insight-metric-value">$96,437</div>
                 <div class="revenue-delta-row">
@@ -558,6 +600,7 @@
           <div class="centered-header">
             <h2 class="section-heading">
               <span data-i18n="featured.titleBefore">Featured</span>
+              <br />
               <span class="serif-italic" data-i18n="featured.titleAccent">
                 investment properties
               </span>

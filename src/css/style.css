@@ -58,7 +58,7 @@
   --shadow-float: 0 22px 54px rgba(17, 24, 39, 0.14);
 
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-serif: "Playfair Display", Georgia, serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
 
   --radius-sm: 10px;
   --radius-md: 18px;
@@ -196,6 +196,8 @@ button {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 500;
+  font-size: 1.16em;
+  letter-spacing: -0.01em;
 }
 
 .pill-badge {
@@ -524,7 +526,7 @@ button {
   max-width: 720px;
   color: #ffffff;
   font-size: clamp(2.4rem, 5.2vw, 3.85rem);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.025em;
   text-shadow: 0 4px 24px rgba(7, 36, 86, 0.28);
@@ -881,9 +883,9 @@ button {
 }
 
 .section-heading {
-  font-size: clamp(2rem, 4vw, 2.95rem);
-  font-weight: 600;
-  line-height: 1.1;
+  font-size: clamp(2.25rem, 4.4vw, 3.35rem);
+  font-weight: 400;
+  line-height: 1.08;
   letter-spacing: -0.025em;
 }
 
@@ -896,12 +898,13 @@ button {
 .insights-panel {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  box-shadow: var(--shadow-soft);
+  border-radius: 30px;
+  padding: 18px;
+  box-shadow: 0 22px 58px rgba(15, 23, 42, 0.06);
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-  gap: 28px;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  gap: 18px;
+  min-height: 540px;
   align-items: stretch;
 }
 
@@ -909,17 +912,19 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 12px;
+  padding: 18px 22px;
+  gap: 18px;
 }
 
 .insight-tab {
   width: 100%;
   text-align: left;
-  padding: 20px 22px;
-  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  border-radius: 22px;
   border: 1px solid transparent;
   transition: background-color var(--transition), color var(--transition),
-    box-shadow var(--transition), border-color var(--transition);
+    box-shadow var(--transition), border-color var(--transition),
+    padding var(--transition);
 }
 
 .insight-tab:hover:not(.is-active) {
@@ -930,45 +935,59 @@ button {
 .insight-tab-head {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
+  gap: 14px;
+  margin-bottom: 10px;
 }
 
 .insight-num {
-  font-size: 0.92rem;
-  font-weight: 600;
+  font-size: 1.02rem;
+  font-weight: 400;
+  color: #aeb5c2;
+}
+
+:root[data-theme="dark"] .insight-num {
   color: var(--text-muted);
 }
 
 .insight-icon-box {
   display: none;
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.14);
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.26) 0%,
+    rgba(255, 255, 255, 0.07) 100%
+  );
+  color: #ffffff;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .insight-tab-title {
-  font-size: 1.12rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
 }
 
 .insight-tab-desc {
-  font-size: 0.85rem;
-  line-height: 1.5;
+  font-size: 0.86rem;
+  line-height: 1.6;
   color: var(--text-secondary);
 }
 
 .insight-tab.is-active {
-  background: linear-gradient(145deg, #27292e 0%, #14161a 100%);
+  padding: 26px 28px;
+  background: linear-gradient(160deg, #32343a 0%, #17181c 58%, #0e0f12 100%);
   color: #ffffff;
-  box-shadow: var(--shadow-card);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 18px 36px rgba(15, 23, 42, 0.2);
 }
 
 :root[data-theme="dark"] .insight-tab.is-active {
-  background: linear-gradient(145deg, #252b3d 0%, #191e2b 100%);
+  background: linear-gradient(160deg, #252b3d 0%, #171b27 100%);
   border-color: rgba(109, 141, 255, 0.45);
 }
 
@@ -980,79 +999,131 @@ button {
   display: inline-flex;
 }
 
+.insight-tab.is-active .insight-tab-title {
+  font-size: 1.56rem;
+}
+
 .insight-tab.is-active .insight-tab-desc {
-  color: rgba(255, 255, 255, 0.78);
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.74);
 }
 
 .insights-visual {
-  border-radius: var(--radius-md);
-  background: var(--mesh-insights);
-  padding: 32px 24px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 12% 14%, #ebc9e7 0%, transparent 52%),
+    radial-gradient(circle at 88% 18%, #d7dcf8 0%, transparent 50%),
+    radial-gradient(circle at 86% 88%, #b7dcfc 0%, transparent 55%),
+    radial-gradient(circle at 16% 86%, #d7e9fb 0%, transparent 52%),
+    #dde4f8;
+  padding: 44px 32px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+:root[data-theme="dark"] .insights-visual {
+  background: var(--mesh-insights);
+}
+
 .revenue-card {
   width: 100%;
-  max-width: 380px;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 22px;
-  box-shadow: var(--shadow-card);
+  max-width: 392px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.78) 0%,
+    rgba(255, 255, 255, 0.68) 100%
+  );
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1.5px solid rgba(255, 255, 255, 0.92);
+  border-radius: 26px;
+  padding: 26px 24px 22px;
+  box-shadow: 0 24px 54px rgba(34, 52, 110, 0.1);
+}
+
+:root[data-theme="dark"] .revenue-card {
+  background: rgba(20, 24, 36, 0.84);
+  border-color: rgba(255, 255, 255, 0.16);
 }
 
 .revenue-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
   margin-bottom: 6px;
 }
 
+.revenue-more-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+}
+
+:root[data-theme="dark"] .revenue-more-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
 .revenue-value {
-  font-size: 2.05rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 2.9rem;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   font-variant-numeric: tabular-nums;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .revenue-delta-row {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.76rem;
-  color: var(--text-muted);
-  margin-bottom: 18px;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
 }
 
 .delta-pill {
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: var(--radius-pill);
+  background-color: #d5f5dc;
+  color: #1a7f37;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+:root[data-theme="dark"] .delta-pill {
   background-color: var(--badge-mint-bg);
   color: var(--badge-mint-fg);
-  font-weight: 700;
 }
 
 .chart-area {
   position: relative;
-  height: 158px;
+  height: 204px;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
+  gap: 8px;
   align-items: end;
-  padding-top: 22px;
+  padding-top: 10px;
 }
 
 .chart-trend-svg {
   position: absolute;
-  inset: 20px 0 24px 0;
+  z-index: 2;
+  inset: 14px 0 38px 0;
   width: 100%;
-  height: calc(100% - 44px);
+  height: calc(100% - 52px);
   pointer-events: none;
 }
 
@@ -1060,7 +1131,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   height: 100%;
   min-width: 0;
 }
@@ -1076,39 +1147,68 @@ button {
   position: relative;
   width: 100%;
   border-radius: 10px;
-  background-color: rgba(164, 178, 232, 0.42);
+  background: linear-gradient(
+    180deg,
+    rgba(191, 200, 245, 0.88) 0%,
+    rgba(191, 200, 245, 0.56) 100%
+  );
   transition: height 0.45s cubic-bezier(0.22, 1, 0.36, 1),
     background 0.3s ease;
 }
 
 :root[data-theme="dark"] .bar-fill {
-  background-color: rgba(138, 164, 255, 0.22);
+  background: linear-gradient(
+    180deg,
+    rgba(138, 164, 255, 0.32) 0%,
+    rgba(138, 164, 255, 0.14) 100%
+  );
 }
 
 .bar-fill.is-peak {
-  background: linear-gradient(180deg, #3b63ff 0%, #6d8bff 100%);
-  box-shadow: 0 8px 20px rgba(43, 80, 236, 0.32);
+  background: linear-gradient(
+    180deg,
+    #1e4bff 0%,
+    #4e76ff 65%,
+    #7b9bff 100%
+  );
+  box-shadow: 0 10px 24px rgba(38, 78, 248, 0.35);
 }
 
 .bar-peak-tag {
   position: absolute;
-  top: 6px;
+  top: 8px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.62rem;
-  font-weight: 700;
+  font-size: 0.65rem;
+  font-weight: 600;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .bar-day {
+  padding: 4px 8px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(255, 255, 255, 0.35);
   font-size: 0.72rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-weight: 500;
 }
 
+:root[data-theme="dark"] .bar-day {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+}
+
 .bar-col.is-peak .bar-day {
-  color: var(--text-primary);
-  font-weight: 700;
+  background-color: #ffffff;
+  color: #14161a;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+:root[data-theme="dark"] .bar-col.is-peak .bar-day {
+  background-color: var(--accent-blue);
+  color: #0b0d12;
 }
 
 /* ==========================================================================
@@ -1116,11 +1216,12 @@ button {
    ========================================================================== */
 .centered-header {
   text-align: center;
-  max-width: 580px;
+  max-width: 760px;
   margin: 0 auto 48px;
 }
 
 .centered-header .section-desc {
+  max-width: 520px;
   margin: 12px auto 0;
 }
 
@@ -1294,7 +1395,7 @@ button {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 500;
-  font-size: clamp(2.05rem, 5.6vw, 4.6rem);
+  font-size: clamp(2.3rem, 6.2vw, 5.1rem);
   color: var(--accent-blue);
   line-height: 1;
 }
@@ -2080,27 +2181,32 @@ button {
 
 @media (max-width: 480px) {
   .insights-panel {
-    padding: 18px;
+    padding: 12px;
+  }
+
+  .insights-tabs {
+    padding: 6px;
   }
 
   .insights-visual {
-    padding: 20px 14px;
+    padding: 16px 10px;
   }
 
   .revenue-card {
-    padding: 16px;
+    padding: 16px 12px;
   }
 
   .chart-area {
-    gap: 5px;
+    gap: 4px;
   }
 
   .bar-peak-tag {
-    font-size: 0.56rem;
+    font-size: 0.54rem;
   }
 
   .bar-day {
-    font-size: 0.65rem;
+    padding: 3px 4px;
+    font-size: 0.62rem;
   }
 
   .dream-banner {

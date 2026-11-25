@@ -65,19 +65,22 @@
 
   const INSIGHTS_SERIES = [
     {
-      heights: [42, 66, 54, 48, 86, 58, 44],
+      heights: [46, 68, 56, 52, 92, 60, 48],
       peakIndex: 4,
-      linePoints: "15,78 70,56 125,68 180,52 235,34 290,54 345,48",
+      curvePath:
+        "M 10 80 C 38 62, 66 48, 96 60 C 126 72, 152 66, 180 54 C 208 42, 224 38, 246 46 C 272 56, 296 72, 322 58 C 336 50, 346 48, 354 52",
     },
     {
-      heights: [58, 44, 72, 50, 94, 52, 62],
+      heights: [64, 52, 82, 51, 98, 55, 80],
       peakIndex: 4,
-      linePoints: "15,82 70,68 125,74 180,52 235,34 290,64 345,56",
+      curvePath:
+        "M 10 88 C 36 62, 62 62, 94 74 C 128 86, 154 74, 182 58 C 208 44, 226 38, 248 48 C 274 60, 294 82, 318 60 C 334 46, 344 48, 354 56",
     },
     {
-      heights: [50, 62, 68, 76, 98, 70, 64],
+      heights: [52, 64, 70, 78, 98, 72, 66],
       peakIndex: 4,
-      linePoints: "15,76 70,66 125,60 180,46 235,28 290,48 345,42",
+      curvePath:
+        "M 10 82 C 42 66, 74 60, 108 62 C 142 64, 168 48, 198 40 C 224 32, 244 30, 266 44 C 290 60, 314 54, 336 42 C 344 38, 350 40, 354 44",
     },
   ];
 
@@ -138,13 +141,14 @@
     svg.setAttribute("preserveAspectRatio", "none");
     svg.setAttribute("aria-hidden", "true");
 
-    const poly = document.createElementNS(svgNS, "polyline");
-    poly.setAttribute("fill", "none");
-    poly.setAttribute("stroke", "#e93f8c");
-    poly.setAttribute("stroke-width", "2.2");
-    poly.setAttribute("stroke-dasharray", "4 4");
-    poly.setAttribute("points", series.linePoints);
-    svg.appendChild(poly);
+    const path = document.createElementNS(svgNS, "path");
+    path.setAttribute("fill", "none");
+    path.setAttribute("stroke", "#e82e82");
+    path.setAttribute("stroke-width", "2.1");
+    path.setAttribute("stroke-dasharray", "4 4");
+    path.setAttribute("stroke-linecap", "round");
+    path.setAttribute("d", series.curvePath);
+    svg.appendChild(path);
     chartEl.appendChild(svg);
 
     series.heights.forEach((pct, dayIdx) => {
