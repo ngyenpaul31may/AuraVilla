@@ -1,169 +1,89 @@
 /**
  * AuraVilla main application script:
- * - Property catalog filtering, sorting, and localized rendering
- * - Hero quick-search sync
- * - Accessible property detail modal with focus trap
- * - Mobile drawer, sticky header, scroll-to-top, and reveal animations
- * - Contact/viewing inquiry validation
+ * - Interactive Data-Driven Insights tabs & Revenue chart
+ * - 3-card tilted investment properties carousel + Property Detail Modal
+ * - Accessible Private Inquiry Modal & validation
+ * - Mobile drawer & sticky header state
  */
 (() => {
   const PROPERTIES = [
     {
-      id: "solstice-cliff-villa",
-      type: "villa",
+      id: "villa-redwood",
+      status: "underOffer",
+      badgeStyle: "pill-peach",
+      beds: 5,
+      baths: 6,
+      area: 640,
+      image: "assets/images/property-cliffside.png",
+    },
+    {
+      id: "cedar-pavilion",
+      status: "rented",
+      badgeStyle: "pill-mint",
+      beds: 4,
+      baths: 5,
+      area: 520,
+      image: "assets/images/property-hillside.png",
+    },
+    {
+      id: "skyline-edge",
+      status: "forSale",
+      badgeStyle: "pill-lilac",
+      beds: 4,
+      baths: 4,
+      area: 440,
+      image: "assets/images/property-courtyard.png",
+    },
+    {
+      id: "solstice-cliff",
+      status: "underOffer",
+      badgeStyle: "pill-peach",
       beds: 5,
       baths: 6,
       area: 680,
-      badge: "signature",
-      featured: true,
-      image: "assets/images/property-cliffside.png",
-      fallback: {
-        title: "Solstice Cliffside Villa",
-        location: "Coastal Ridge Enclave",
-        price: "Upon Inquiry",
-        badge: "Signature",
-        summary:
-          "Cantilevered oceanfront villa with double-height glazing, infinity pool, and seamless indoor-outdoor limestone terraces.",
-        description:
-          "Designed around uninterrupted coastal light, Solstice Cliffside Villa pairs monolithic white concrete planes with warm oak joinery and floor-to-ceiling low-iron glass.",
-        features: [
-          "22-meter heated saltwater infinity pool",
-          "Double-height ocean-view great room",
-          "Private wellness suite with sauna & plunge",
-        ],
-      },
+      image: "assets/images/hero-villa.png",
     },
     {
-      id: "courtyard-travertine-house",
-      type: "house",
+      id: "courtyard-travertine",
+      status: "forSale",
+      badgeStyle: "pill-lilac",
       beds: 4,
       baths: 4,
       area: 460,
-      badge: "new",
-      featured: true,
-      image: "assets/images/property-courtyard.png",
-      fallback: {
-        title: "Courtyard Travertine House",
-        location: "Botanical Reserve District",
-        price: "Upon Inquiry",
-        badge: "New Listing",
-        summary:
-          "Minimalist modern house organized around a tranquil reflection pond, oak timber louvers, and natural stone galleries.",
-        description:
-          "Built for quiet privacy in a lush residential enclave, this architectural house frames an interior reflection courtyard at its heart.",
-        features: [
-          "Central reflection pond & Zen garden courtyard",
-          "Honed Roman travertine facade & flooring",
-          "3-car subterranean gallery garage",
-        ],
-      },
+      image: "assets/images/interior-living.png",
     },
     {
-      id: "pinecrest-glass-pavilion",
-      type: "villa",
-      beds: 4,
-      baths: 5,
-      area: 540,
-      badge: "signature",
-      featured: true,
-      image: "assets/images/property-hillside.png",
-      fallback: {
-        title: "Pinecrest Glass Pavilion",
-        location: "Highland Forest Sanctuary",
-        price: "Upon Inquiry",
-        badge: "Signature",
-        summary:
-          "Elevated hillside glass pavilion suspended among mature pines with a wrap-around timber deck and fireplace lounge.",
-        description:
-          "Anchored into a gentle wooded slope, Pinecrest Glass Pavilion floats quietly above the canopy with expansive structural glass walls.",
-        features: [
-          "Panoramic 270-degree hillside glass facade",
-          "Cantilevered teak & limestone viewing deck",
-          "Geothermal radiant floor heating",
-        ],
-      },
-    },
-    {
-      id: "skyline-aura-penthouse",
-      type: "penthouse",
+      id: "skyline-penthouse",
+      status: "rented",
+      badgeStyle: "pill-mint",
       beds: 3,
       baths: 4,
       area: 390,
-      badge: "limited",
-      featured: false,
       image: "assets/images/property-penthouse.png",
-      fallback: {
-        title: "Skyline Aura Penthouse",
-        location: "Central Waterfront Tower",
-        price: "Upon Inquiry",
-        badge: "Private Release",
-        summary:
-          "Full-floor sky villa featuring a private sunken terrace lounge, reflective water court, and 360-degree horizon views.",
-        description:
-          "Occupying the entire crown of an architectural landmark, Skyline Aura Penthouse brings villa-scale proportions to elevated urban living.",
-        features: [
-          "Private direct-keyed elevator lobby",
-          "Landscaped wrap-around sky terrace & sunken lounge",
-          "24/7 concierge & private climate-controlled storage",
-        ],
-      },
+    },
+  ];
+
+  const INSIGHTS_SERIES = [
+    {
+      heights: [42, 66, 54, 48, 86, 58, 44],
+      peakIndex: 4,
+      linePoints: "15,78 70,56 125,68 180,52 235,34 290,54 345,48",
     },
     {
-      id: "horizon-infinity-estate",
-      type: "villa",
-      beds: 6,
-      baths: 7,
-      area: 820,
-      badge: "signature",
-      featured: true,
-      image: "assets/images/hero-villa.png",
-      fallback: {
-        title: "Horizon Infinity Estate",
-        location: "Peninsula South Shore",
-        price: "Upon Inquiry",
-        badge: "Signature",
-        summary:
-          "Twilight-oriented contemporary estate featuring twin guest pavilions, sculptural water mirror, and private garden lawn.",
-        description:
-          "Conceived as a multi-generational compound, Horizon Infinity Estate pairs a dramatic main residence with two independent guest pavilions.",
-        features: [
-          "Main residence plus two detached guest pavilions",
-          "Outdoor summer kitchen & pergola dining terrace",
-          "Solar-integrated roof & rainwater harvesting",
-        ],
-      },
+      heights: [58, 44, 72, 50, 94, 52, 62],
+      peakIndex: 4,
+      linePoints: "15,82 70,68 125,74 180,52 235,34 290,64 345,56",
     },
     {
-      id: "atrium-minimal-residence",
-      type: "house",
-      beds: 4,
-      baths: 4,
-      area: 420,
-      badge: "new",
-      featured: false,
-      image: "assets/images/interior-living.png",
-      fallback: {
-        title: "Atrium Minimal Residence",
-        location: "Heritage Park Avenue",
-        price: "Upon Inquiry",
-        badge: "New Listing",
-        summary:
-          "Double-height interior sanctuary with a monolithic travertine fireplace, slatted oak ceiling, and private garden sanctuary.",
-        description:
-          "Combining urban convenience with serene residential proportions, Atrium Minimal Residence centers on a sunlit double-height living atrium.",
-        features: [
-          "Double-height sunlit living atrium",
-          "Monolithic travertine fireplace centerpiece",
-          "Private landscaped rear garden & plunge pool",
-        ],
-      },
+      heights: [50, 62, 68, 76, 98, 70, 64],
+      peakIndex: 4,
+      linePoints: "15,76 70,66 125,60 180,46 235,28 290,48 345,42",
     },
   ];
 
   const state = {
-    type: "all",
-    minBeds: 0,
-    sort: "featured",
+    activeInsight: 1,
+    carouselIndex: 0,
     activeModalId: null,
     lastFocusedEl: null,
     inquirySubmitted: false,
@@ -184,55 +104,145 @@
     return el;
   }
 
-  function getFilteredProperties() {
-    const filtered = PROPERTIES.filter((item) => {
-      const matchType = state.type === "all" || item.type === state.type;
-      const matchBeds = item.beds >= state.minBeds;
-      return matchType && matchBeds;
-    });
+  function renderInsightChart() {
+    const idx = state.activeInsight;
+    const series = INSIGHTS_SERIES[idx] || INSIGHTS_SERIES[1];
 
-    const sorted = [...filtered];
-    if (state.sort === "areaDesc") {
-      sorted.sort((a, b) => b.area - a.area);
-    } else if (state.sort === "bedsDesc") {
-      sorted.sort((a, b) => b.beds - a.beds || b.area - a.area);
-    } else {
-      sorted.sort((a, b) => Number(b.featured) - Number(a.featured));
+    const titleEl = document.getElementById("insight-metric-title");
+    const valueEl = document.getElementById("insight-metric-value");
+    const deltaEl = document.getElementById("insight-metric-delta");
+    const noteEl = document.getElementById("insight-metric-note");
+    const chartEl = document.getElementById("insight-chart-bars");
+
+    if (titleEl) {
+      titleEl.textContent = tr(`insights.tabs.${idx}.metricTitle`, "Revenue");
     }
-    return sorted;
+    if (valueEl) {
+      valueEl.textContent = tr(`insights.tabs.${idx}.metricValue`, "$96,437");
+    }
+    if (deltaEl) {
+      deltaEl.textContent = tr(`insights.tabs.${idx}.delta`, "↑ 18.4%");
+    }
+    if (noteEl) {
+      noteEl.textContent = tr(`insights.tabs.${idx}.deltaNote`, "vs last week");
+    }
+    if (!chartEl) return;
+
+    chartEl.innerHTML = "";
+    const peakTagText = tr(`insights.tabs.${idx}.peak`, "+20%");
+
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("class", "chart-trend-svg");
+    svg.setAttribute("viewBox", "0 0 360 100");
+    svg.setAttribute("preserveAspectRatio", "none");
+    svg.setAttribute("aria-hidden", "true");
+
+    const poly = document.createElementNS(svgNS, "polyline");
+    poly.setAttribute("fill", "none");
+    poly.setAttribute("stroke", "#e93f8c");
+    poly.setAttribute("stroke-width", "2.2");
+    poly.setAttribute("stroke-dasharray", "4 4");
+    poly.setAttribute("points", series.linePoints);
+    svg.appendChild(poly);
+    chartEl.appendChild(svg);
+
+    series.heights.forEach((pct, dayIdx) => {
+      const isPeak = dayIdx === series.peakIndex;
+      const col = createEl("div", `bar-col${isPeak ? " is-peak" : ""}`);
+      const track = createEl("div", "bar-track");
+      const bar = createEl("div", `bar-fill${isPeak ? " is-peak" : ""}`);
+      bar.style.height = `${pct}%`;
+
+      if (isPeak) {
+        bar.appendChild(createEl("span", "bar-peak-tag", peakTagText));
+      }
+
+      track.appendChild(bar);
+      const dayLabel = tr(
+        `insights.days.${dayIdx}`,
+        ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][dayIdx],
+      );
+      col.append(track, createEl("span", "bar-day", dayLabel));
+      chartEl.appendChild(col);
+    });
   }
 
-  function renderProperties() {
-    const grid = document.getElementById("properties-grid");
-    const emptyEl = document.getElementById("properties-empty");
-    if (!grid || !emptyEl) return;
+  function bindInsightTabs() {
+    const tabs = Array.from(document.querySelectorAll("[data-insight-tab]"));
+    const tabpanel = document.getElementById("insight-tabpanel");
 
-    const list = getFilteredProperties();
-    grid.innerHTML = "";
+    const activateTab = (nextIdx, moveFocus = false) => {
+      state.activeInsight = nextIdx;
+      tabs.forEach((btn) => {
+        const idx = Number(btn.getAttribute("data-insight-tab"));
+        const active = idx === nextIdx;
+        btn.classList.toggle("is-active", active);
+        btn.setAttribute("aria-selected", String(active));
+        btn.setAttribute("tabindex", active ? "0" : "-1");
+        if (active && tabpanel) {
+          tabpanel.setAttribute("aria-labelledby", btn.id);
+        }
+        if (active && moveFocus) {
+          btn.focus();
+        }
+      });
+      renderInsightChart();
+    };
 
-    if (list.length === 0) {
-      emptyEl.hidden = false;
-      return;
-    }
+    tabs.forEach((tab, i) => {
+      tab.addEventListener("click", () => {
+        activateTab(Number(tab.getAttribute("data-insight-tab")), false);
+      });
 
-    emptyEl.hidden = true;
-    const bedsLabel = tr("properties.specs.beds", "Beds");
-    const bathsLabel = tr("properties.specs.baths", "Baths");
-    const areaUnit = tr("properties.specs.area", "m²");
-    const ctaText = tr("properties.viewDetails", "View Residence");
+      tab.addEventListener("keydown", (e) => {
+        let next = null;
+        if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+          next = (i + 1) % tabs.length;
+        } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+          next = (i - 1 + tabs.length) % tabs.length;
+        } else if (e.key === "Home") {
+          next = 0;
+        } else if (e.key === "End") {
+          next = tabs.length - 1;
+        }
+        if (next !== null) {
+          e.preventDefault();
+          activateTab(next, true);
+        }
+      });
+    });
+  }
 
-    list.forEach((item) => {
-      const base = `properties.items.${item.id}`;
-      const title = tr(`${base}.title`, item.fallback.title);
-      const location = tr(`${base}.location`, item.fallback.location);
-      const price = tr(`${base}.price`, item.fallback.price);
-      const summary = tr(`${base}.summary`, item.fallback.summary);
-      const badgeText = tr(
-        `properties.badges.${item.badge}`,
-        item.fallback.badge,
+  function renderCarousel() {
+    const stage = document.getElementById("carousel-stage");
+    if (!stage) return;
+
+    stage.innerHTML = "";
+    const total = PROPERTIES.length;
+    const slots = [
+      { offset: -1, posClass: "is-left" },
+      { offset: 0, posClass: "is-center" },
+      { offset: 1, posClass: "is-right" },
+    ];
+
+    const exploreLabel = tr("featured.explore", "Explore");
+
+    slots.forEach(({ offset, posClass }) => {
+      const idx = (state.carouselIndex + offset + total) % total;
+      const item = PROPERTIES[idx];
+      const base = `featured.items.${item.id}`;
+
+      const title = tr(`${base}.title`, item.id);
+      const summary = tr(`${base}.summary`, "");
+      const price = tr(`${base}.price`, "$4,800");
+      const priceSuffix = tr(
+        `${base}.priceSuffix`,
+        tr("featured.perMonth", "/month"),
       );
+      const badgeLabel = tr(`featured.badges.${item.status}`, item.status);
 
-      const card = createEl("article", "property-card");
+      const card = createEl("article", `property-card ${posClass}`);
 
       const media = createEl("div", "property-media");
       const img = document.createElement("img");
@@ -242,40 +252,47 @@
       img.decoding = "async";
       media.appendChild(img);
 
-      media.appendChild(createEl("span", "property-badge", badgeText));
+      const badge = createEl(
+        "span",
+        `pill-badge ${item.badgeStyle} property-status-badge`,
+        badgeLabel,
+      );
+      media.appendChild(badge);
       card.appendChild(media);
 
-      const body = createEl("div", "property-body");
+      const info = createEl("div", "property-info");
+      info.appendChild(createEl("h3", "property-title", title));
+      info.appendChild(createEl("p", "property-summary", summary));
 
-      const metaTop = createEl("div", "property-meta-top");
-      metaTop.appendChild(createEl("span", "property-location", location));
-      metaTop.appendChild(createEl("span", "property-price", price));
-      body.appendChild(metaTop);
+      const foot = createEl("div", "property-footer");
+      const priceEl = createEl("div", "property-price", price);
+      priceEl.appendChild(createEl("span", "", priceSuffix));
 
-      body.appendChild(createEl("h3", "property-title", title));
-      body.appendChild(createEl("p", "property-summary", summary));
-
-      const specs = createEl("dl", "property-specs");
-      [
-        [`${item.beds}`, bedsLabel],
-        [`${item.baths}`, bathsLabel],
-        [`${item.area}`, areaUnit],
-      ].forEach(([val, lbl]) => {
-        const pair = createEl("div", "spec-pair");
-        const dt = createEl("dt", "", lbl);
-        const dd = createEl("dd", "", val);
-        pair.append(dd, dt);
-        specs.appendChild(pair);
-      });
-      body.appendChild(specs);
-
-      const btn = createEl("button", "property-card-btn", ctaText);
+      const btn = createEl("button", "btn-pill explore-btn", `${exploreLabel} ↗`);
       btn.type = "button";
-      btn.addEventListener("click", () => openModal(item.id, btn));
-      body.appendChild(btn);
+      btn.setAttribute("data-property-trigger", item.id);
+      btn.addEventListener("click", () => openPropertyModal(item.id, btn));
 
-      card.appendChild(body);
-      grid.appendChild(card);
+      foot.append(priceEl, btn);
+      info.appendChild(foot);
+      card.appendChild(info);
+      stage.appendChild(card);
+    });
+  }
+
+  function bindCarousel() {
+    const prevBtn = document.getElementById("carousel-prev");
+    const nextBtn = document.getElementById("carousel-next");
+
+    prevBtn?.addEventListener("click", () => {
+      state.carouselIndex =
+        (state.carouselIndex - 1 + PROPERTIES.length) % PROPERTIES.length;
+      renderCarousel();
+    });
+
+    nextBtn?.addEventListener("click", () => {
+      state.carouselIndex = (state.carouselIndex + 1) % PROPERTIES.length;
+      renderCarousel();
     });
   }
 
@@ -291,10 +308,7 @@
     PROPERTIES.forEach((item) => {
       const opt = document.createElement("option");
       opt.value = item.id;
-      opt.textContent = tr(
-        `properties.items.${item.id}.title`,
-        item.fallback.title,
-      );
+      opt.textContent = tr(`featured.items.${item.id}.title`, item.id);
       select.appendChild(opt);
     });
 
@@ -303,86 +317,18 @@
     }
   }
 
-  function syncFilterUI() {
-    document.querySelectorAll("[data-filter-type]").forEach((btn) => {
-      const active = btn.getAttribute("data-filter-type") === state.type;
-      btn.classList.toggle("is-active", active);
-      btn.setAttribute("aria-pressed", String(active));
-    });
-
-    const bedsFilter = document.getElementById("filter-beds");
-    if (bedsFilter) bedsFilter.value = String(state.minBeds);
-
-    const sortFilter = document.getElementById("filter-sort");
-    if (sortFilter) sortFilter.value = state.sort;
-  }
-
-  function bindFilters() {
-    document.querySelectorAll("[data-filter-type]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        state.type = btn.getAttribute("data-filter-type") || "all";
-        syncFilterUI();
-        renderProperties();
-      });
-    });
-
-    const bedsFilter = document.getElementById("filter-beds");
-    if (bedsFilter) {
-      bedsFilter.addEventListener("change", (e) => {
-        state.minBeds = Number(e.target.value) || 0;
-        renderProperties();
-      });
-    }
-
-    const sortFilter = document.getElementById("filter-sort");
-    if (sortFilter) {
-      sortFilter.addEventListener("change", (e) => {
-        state.sort = e.target.value || "featured";
-        renderProperties();
-      });
-    }
-
-    const resetBtn = document.getElementById("reset-filters-btn");
-    if (resetBtn) {
-      resetBtn.addEventListener("click", () => {
-        state.type = "all";
-        state.minBeds = 0;
-        state.sort = "featured";
-        syncFilterUI();
-        renderProperties();
-      });
-    }
-
-    const heroForm = document.getElementById("hero-search-form");
-    if (heroForm) {
-      heroForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const typeSelect = document.getElementById("hero-type");
-        const bedsSelect = document.getElementById("hero-beds");
-        state.type = typeSelect ? typeSelect.value : "all";
-        state.minBeds = bedsSelect ? Number(bedsSelect.value) || 0 : 0;
-        syncFilterUI();
-        renderProperties();
-        document
-          .getElementById("properties")
-          ?.scrollIntoView({ behavior: "smooth" });
-      });
-    }
-  }
-
-  function renderModalContent(propertyId) {
+  function renderPropertyModal(propertyId) {
     const item = PROPERTIES.find((p) => p.id === propertyId);
     if (!item) return;
 
-    const base = `properties.items.${item.id}`;
-    const title = tr(`${base}.title`, item.fallback.title);
-    const location = tr(`${base}.location`, item.fallback.location);
-    const price = tr(`${base}.price`, item.fallback.price);
-    const desc = tr(`${base}.description`, item.fallback.description);
-    const features = tr(`${base}.features`, item.fallback.features);
+    const base = `featured.items.${item.id}`;
+    const title = tr(`${base}.title`, item.id);
+    const location = tr(`${base}.location`, "");
+    const price = `${tr(`${base}.price`, "")}${tr(`${base}.priceSuffix`, "")}`;
+    const desc = tr(`${base}.description`, "");
+    const features = tr(`${base}.features`, []);
 
     const modalImg = document.getElementById("modal-image");
-    const modalBadge = document.getElementById("modal-badge");
     const modalLocation = document.getElementById("modal-location");
     const modalTitle = document.getElementById("modal-title");
     const modalPrice = document.getElementById("modal-price");
@@ -394,12 +340,6 @@
       modalImg.src = item.image;
       modalImg.alt = title;
     }
-    if (modalBadge) {
-      modalBadge.textContent = tr(
-        `properties.badges.${item.badge}`,
-        item.fallback.badge,
-      );
-    }
     if (modalLocation) modalLocation.textContent = location;
     if (modalTitle) modalTitle.textContent = title;
     if (modalPrice) modalPrice.textContent = price;
@@ -408,12 +348,9 @@
     if (modalSpecs) {
       modalSpecs.innerHTML = "";
       [
-        [String(item.beds), tr("properties.specs.beds", "Beds")],
-        [String(item.baths), tr("properties.specs.baths", "Baths")],
-        [
-          `${item.area} ${tr("modal.areaUnit", "m²")}`,
-          tr("featured.specs.areaLabel", "Living Area"),
-        ],
+        [String(item.beds), tr("featured.specs.beds", "Beds")],
+        [String(item.baths), tr("featured.specs.baths", "Baths")],
+        [`${item.area}`, tr("featured.specs.area", "m²")],
       ].forEach(([val, lbl]) => {
         const box = createEl("div", "modal-spec-box");
         box.appendChild(createEl("strong", "", val));
@@ -424,14 +361,15 @@
 
     if (modalFeatures) {
       modalFeatures.innerHTML = "";
-      const list = Array.isArray(features) ? features : item.fallback.features;
-      list.forEach((feat) => {
-        modalFeatures.appendChild(createEl("li", "", feat));
-      });
+      if (Array.isArray(features)) {
+        features.forEach((feat) => {
+          modalFeatures.appendChild(createEl("li", "", feat));
+        });
+      }
     }
   }
 
-  function trapModalFocus(e, modal) {
+  function trapFocus(e, modal) {
     if (e.key !== "Tab" || modal.hidden) return;
     const focusables = modal.querySelectorAll(
       'button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
@@ -439,6 +377,12 @@
     if (!focusables.length) return;
     const first = focusables[0];
     const last = focusables[focusables.length - 1];
+
+    if (!modal.contains(document.activeElement)) {
+      e.preventDefault();
+      first.focus();
+      return;
+    }
 
     if (e.shiftKey && document.activeElement === first) {
       e.preventDefault();
@@ -449,109 +393,158 @@
     }
   }
 
-  function openModal(propertyId, triggerEl) {
+  function resetInquiryFormState() {
+    const statusEl = document.getElementById("inquiry-status");
+    if (statusEl) statusEl.textContent = "";
+    state.inquirySubmitted = false;
+
+    [
+      ["inquiry-name", "error-name"],
+      ["inquiry-email", "error-email"],
+      ["inquiry-property", "error-property"],
+    ].forEach(([fieldId, errId]) => {
+      const field = document.getElementById(fieldId);
+      const errEl = document.getElementById(errId);
+      if (field) {
+        field.classList.remove("is-invalid");
+        field.setAttribute("aria-invalid", "false");
+      }
+      if (errEl) errEl.textContent = "";
+    });
+  }
+
+  function openPropertyModal(propertyId, triggerEl) {
     const modal = document.getElementById("property-modal");
     if (!modal) return;
-
     state.activeModalId = propertyId;
     state.lastFocusedEl = triggerEl || document.activeElement;
-    renderModalContent(propertyId);
-
+    renderPropertyModal(propertyId);
     modal.hidden = false;
     document.body.classList.add("modal-open");
     document.getElementById("modal-close-btn")?.focus();
   }
 
-  function closeModal() {
-    const modal = document.getElementById("property-modal");
-    if (!modal || modal.hidden) return;
+  function openInquiryModal(preselectId, triggerEl) {
+    const modal = document.getElementById("inquiry-modal");
+    if (!modal) return;
 
-    modal.hidden = true;
-    document.body.classList.remove("modal-open");
-    state.activeModalId = null;
+    const drawer = document.getElementById("mobile-drawer");
+    const candidate = triggerEl || document.activeElement;
+    state.lastFocusedEl =
+      drawer && candidate && drawer.contains(candidate)
+        ? document.getElementById("nav-toggle")
+        : candidate;
 
-    if (state.lastFocusedEl && typeof state.lastFocusedEl.focus === "function") {
-      state.lastFocusedEl.focus();
+    resetInquiryFormState();
+
+    const select = document.getElementById("inquiry-property");
+    if (select) {
+      select.value = preselectId || "";
+    }
+
+    modal.hidden = false;
+    document.body.classList.add("modal-open");
+    document.getElementById("inquiry-name")?.focus();
+  }
+
+  function closeAllModals() {
+    const propModal = document.getElementById("property-modal");
+    const inqModal = document.getElementById("inquiry-modal");
+    const closedPropertyId = state.activeModalId;
+    let closed = false;
+
+    [propModal, inqModal].forEach((m) => {
+      if (m && !m.hidden) {
+        m.hidden = true;
+        closed = true;
+      }
+    });
+
+    if (closed) {
+      document.body.classList.remove("modal-open");
+      state.activeModalId = null;
+
+      let target = state.lastFocusedEl;
+      if (!target || !document.contains(target)) {
+        target = closedPropertyId
+          ? document.querySelector(`[data-property-trigger="${closedPropertyId}"]`)
+          : null;
+      }
+      if (target && typeof target.focus === "function") {
+        target.focus();
+      }
     }
   }
 
-  function bindModal() {
-    const modal = document.getElementById("property-modal");
-    const closeBtn = document.getElementById("modal-close-btn");
-    const scheduleBtn = document.getElementById("modal-schedule-btn");
-    const featuredBtn = document.getElementById("featured-inspect-btn");
+  function bindModals() {
+    const propModal = document.getElementById("property-modal");
+    const inqModal = document.getElementById("inquiry-modal");
 
-    featuredBtn?.addEventListener("click", () => {
-      openModal("solstice-cliff-villa", featuredBtn);
+    document
+      .getElementById("modal-close-btn")
+      ?.addEventListener("click", closeAllModals);
+    document
+      .getElementById("inquiry-close-btn")
+      ?.addEventListener("click", closeAllModals);
+
+    [propModal, inqModal].forEach((m) => {
+      m?.addEventListener("click", (e) => {
+        if (e.target === m) closeAllModals();
+      });
     });
 
-    closeBtn?.addEventListener("click", closeModal);
+    document
+      .getElementById("modal-schedule-btn")
+      ?.addEventListener("click", () => {
+        const targetId = state.activeModalId;
+        state.activeModalId = null;
+        if (propModal) propModal.hidden = true;
+        openInquiryModal(targetId, state.lastFocusedEl);
+      });
 
-    modal?.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
-
-    scheduleBtn?.addEventListener("click", () => {
-      const targetId = state.activeModalId;
-      closeModal();
-      const select = document.getElementById("inquiry-property");
-      if (select && targetId) {
-        select.value = targetId;
-        select.classList.remove("is-invalid");
-        select.setAttribute("aria-invalid", "false");
-        const errProp = document.getElementById("error-property");
-        if (errProp) errProp.textContent = "";
-      }
-      document
-        .getElementById("contact")
-        ?.scrollIntoView({ behavior: "smooth" });
-      document.getElementById("inquiry-name")?.focus({ preventScroll: true });
+    document.querySelectorAll("[data-open-inquiry]").forEach((trigger) => {
+      trigger.addEventListener("click", (e) => {
+        if (trigger.tagName === "A") e.preventDefault();
+        openInquiryModal(null, trigger);
+      });
     });
 
     document.addEventListener("keydown", (e) => {
-      if (modal && !modal.hidden) {
-        trapModalFocus(e, modal);
-      }
+      if (propModal && !propModal.hidden) trapFocus(e, propModal);
+      if (inqModal && !inqModal.hidden) trapFocus(e, inqModal);
+
       if (e.key === "Escape") {
-        if (modal && !modal.hidden) {
-          closeModal();
+        if ((propModal && !propModal.hidden) || (inqModal && !inqModal.hidden)) {
+          closeAllModals();
           return;
         }
-        const nav = document.getElementById("primary-nav");
-        if (nav && nav.classList.contains("is-open")) {
-          closeMobileNav(true);
+        const drawer = document.getElementById("mobile-drawer");
+        if (drawer && drawer.classList.contains("is-open")) {
+          closeMobileDrawer(true);
         }
       }
     });
   }
 
-  function closeMobileNav(restoreFocus = false) {
-    const nav = document.getElementById("primary-nav");
+  function closeMobileDrawer(restoreFocus = false) {
+    const drawer = document.getElementById("mobile-drawer");
     const toggle = document.getElementById("nav-toggle");
-    if (!nav || !toggle) return;
-    nav.classList.remove("is-open");
+    if (!drawer || !toggle) return;
+    drawer.classList.remove("is-open");
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("data-i18n-aria", "nav.menuOpen");
-    toggle.setAttribute(
-      "aria-label",
-      tr("nav.menuOpen", "Open navigation menu"),
-    );
-    if (restoreFocus) {
-      toggle.focus();
-    }
+    toggle.setAttribute("aria-label", tr("nav.menuOpen", "Open navigation menu"));
+    if (restoreFocus) toggle.focus();
   }
 
   function bindNavigationAndScroll() {
     const header = document.getElementById("site-header");
-    const nav = document.getElementById("primary-nav");
+    const drawer = document.getElementById("mobile-drawer");
     const toggle = document.getElementById("nav-toggle");
-    const backToTop = document.getElementById("back-to-top");
 
     toggle?.addEventListener("click", () => {
-      const willOpen = !nav.classList.contains("is-open");
-      nav.classList.toggle("is-open", willOpen);
+      const willOpen = !drawer.classList.contains("is-open");
+      drawer.classList.toggle("is-open", willOpen);
       toggle.setAttribute("aria-expanded", String(willOpen));
       const ariaKey = willOpen ? "nav.menuClose" : "nav.menuOpen";
       toggle.setAttribute("data-i18n-aria", ariaKey);
@@ -564,49 +557,17 @@
       );
     });
 
-    nav?.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => closeMobileNav(false));
+    drawer?.querySelectorAll("a, button").forEach((el) => {
+      el.addEventListener("click", () => closeMobileDrawer(false));
     });
 
     const onScroll = () => {
       const y = window.scrollY || window.pageYOffset;
-      header?.classList.toggle("is-scrolled", y > 24);
-      backToTop?.classList.toggle("is-visible", y > 520);
+      header?.classList.toggle("is-scrolled", y > 40);
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
-
-    backToTop?.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
-
-  function bindRevealAnimations() {
-    const els = document.querySelectorAll(".reveal");
-    if (!els.length) return;
-
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-    if (reduceMotion || !("IntersectionObserver" in window)) {
-      els.forEach((el) => el.classList.add("is-visible"));
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12 },
-    );
-
-    els.forEach((el) => observer.observe(el));
   }
 
   function bindInquiryForm() {
@@ -615,31 +576,29 @@
     const nameInput = document.getElementById("inquiry-name");
     const emailInput = document.getElementById("inquiry-email");
     const propertySelect = document.getElementById("inquiry-property");
-
     if (!form || !statusEl || !nameInput || !emailInput || !propertySelect) {
       return;
     }
 
-    const setFieldError = (input, errorId, message) => {
-      const errEl = document.getElementById(errorId);
-      input.classList.toggle("is-invalid", Boolean(message));
-      input.setAttribute("aria-invalid", String(Boolean(message)));
-      if (errEl) errEl.textContent = message || "";
+    const setFieldError = (input, errId, msg) => {
+      const errEl = document.getElementById(errId);
+      input.classList.toggle("is-invalid", Boolean(msg));
+      input.setAttribute("aria-invalid", String(Boolean(msg)));
+      if (errEl) errEl.textContent = msg || "";
     };
 
-    const validateFields = (focusFirstInvalid = false) => {
+    const validate = (focusFirst = false) => {
       const nameVal = nameInput.value.trim();
       const emailVal = emailInput.value.trim();
       const propVal = propertySelect.value.trim();
       const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal);
-
       let firstInvalid = null;
 
       if (!nameVal) {
         setFieldError(
           nameInput,
           "error-name",
-          tr("contact.validation.nameRequired", "Please enter your full name."),
+          tr("inquiry.validation.nameRequired", "Please enter your full name."),
         );
         firstInvalid = firstInvalid || nameInput;
       } else {
@@ -651,7 +610,7 @@
           emailInput,
           "error-email",
           tr(
-            "contact.validation.emailInvalid",
+            "inquiry.validation.emailInvalid",
             "Please enter a valid email address.",
           ),
         );
@@ -665,8 +624,8 @@
           propertySelect,
           "error-property",
           tr(
-            "contact.validation.propertyRequired",
-            "Please select a residence or consultation option.",
+            "inquiry.validation.propertyRequired",
+            "Please select a property or consultation option.",
           ),
         );
         firstInvalid = firstInvalid || propertySelect;
@@ -674,9 +633,7 @@
         setFieldError(propertySelect, "error-property", "");
       }
 
-      if (focusFirstInvalid && firstInvalid) {
-        firstInvalid.focus();
-      }
+      if (focusFirst && firstInvalid) firstInvalid.focus();
       return !firstInvalid;
     };
 
@@ -685,8 +642,8 @@
       [emailInput, "error-email"],
       [propertySelect, "error-property"],
     ].forEach(([field, errId]) => {
-      const eventName = field.tagName === "SELECT" ? "change" : "input";
-      field.addEventListener(eventName, () => {
+      const ev = field.tagName === "SELECT" ? "change" : "input";
+      field.addEventListener(ev, () => {
         if (field.classList.contains("is-invalid")) {
           setFieldError(field, errId, "");
         }
@@ -696,24 +653,21 @@
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       state.inquirySubmitted = false;
-      statusEl.hidden = true;
       statusEl.textContent = "";
-
-      if (!validateFields(true)) return;
+      if (!validate(true)) return;
 
       state.inquirySubmitted = true;
       statusEl.textContent = tr(
-        "contact.successMessage",
+        "inquiry.successMessage",
         "Thank you. Your private inquiry has been recorded in this preview session.",
       );
-      statusEl.hidden = false;
       form.reset();
     });
 
     window.addEventListener("auravilla:langchange", () => {
-      if (state.inquirySubmitted && !statusEl.hidden) {
+      if (state.inquirySubmitted && statusEl.textContent) {
         statusEl.textContent = tr(
-          "contact.successMessage",
+          "inquiry.successMessage",
           "Thank you. Your private inquiry has been recorded in this preview session.",
         );
       }
@@ -722,23 +676,24 @@
         emailInput.classList.contains("is-invalid") ||
         propertySelect.classList.contains("is-invalid")
       ) {
-        validateFields(false);
+        validate(false);
       }
     });
   }
 
   async function bootstrap() {
-    bindFilters();
-    bindModal();
+    bindInsightTabs();
+    bindCarousel();
+    bindModals();
     bindNavigationAndScroll();
-    bindRevealAnimations();
     bindInquiryForm();
 
     window.addEventListener("auravilla:langchange", () => {
+      renderInsightChart();
+      renderCarousel();
       populatePropertySelect();
-      renderProperties();
       if (state.activeModalId) {
-        renderModalContent(state.activeModalId);
+        renderPropertyModal(state.activeModalId);
       }
     });
 
@@ -749,8 +704,9 @@
     if (window.AuraI18n) {
       await window.AuraI18n.init();
     } else {
+      renderInsightChart();
+      renderCarousel();
       populatePropertySelect();
-      renderProperties();
     }
   }
 

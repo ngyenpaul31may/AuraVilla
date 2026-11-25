@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "AuraVilla | Architectural Houses, Villas & Luxury Real Estate",
-    "description": "AuraVilla curates architectural villas, private residences, and bespoke penthouses designed for timeless living and private acquisition."
+    "title": "AuraVilla | Architectural Property Investments & Modern Villas",
+    "description": "Discover high-growth property investments, curated villas, and modern architectural houses with multi-language portfolio insights."
   },
   "theme": {
     "light": "Light",
@@ -10,256 +10,295 @@
     "switchToLight": "Switch to light theme"
   },
   "nav": {
-    "collections": "Signature",
-    "properties": "Residences",
-    "architecture": "Architecture",
-    "process": "Acquisition",
-    "contact": "Advisory",
-    "cta": "Book Viewing",
+    "home": "Home",
+    "features": "Features",
+    "properties": "Properties",
+    "about": "About",
+    "contact": "Contact",
     "menuOpen": "Open navigation menu",
     "menuClose": "Close navigation menu"
   },
   "hero": {
-    "eyebrow": "PRIVATE ARCHITECTURAL REAL ESTATE",
-    "title": "Timeless Villas & Modern Residences",
-    "subtitle": "Discover curated architectural houses, oceanfront villas, and sky penthouses crafted with natural limestone, glass, and enduring proportions.",
-    "ctaPrimary": "Explore Residences",
-    "ctaSecondary": "Private Consultation",
-    "stats": {
-      "residencesValue": "24+",
-      "residencesLabel": "Curated Residences",
-      "districtsValue": "06",
-      "districtsLabel": "Prime Enclaves",
-      "privateValue": "100%",
-      "privateLabel": "Private Viewings"
+    "titleBefore": "Discover high-growth property",
+    "titleAccent": "investments",
+    "cta": "Start investing now",
+    "occupancyTitle": "Occupancy Rate",
+    "occupancyTotal": "74",
+    "occupancyUnit": "Homes",
+    "rented": "Rented",
+    "maintenance": "Maintenance",
+    "vacant": "Vacant",
+    "advisorName": "Bruce Walker",
+    "advisorValue": "$242,491",
+    "closed": "Closed",
+    "projected": "Projected"
+  },
+  "insights": {
+    "badge1": "INVESTMENTS",
+    "badge2": "EXCLUSIVE",
+    "titleBefore": "Data-driven property",
+    "titleAccent": "insights",
+    "subtitle": "Our platform leverages smart analytics and market trends to help you find high-potential investments. We combine real-time data with intuitive visual dashboards so you can pinpoint properties poised for growth.",
+    "tabs": {
+      "0": {
+        "num": "01",
+        "title": "Market Analytics",
+        "desc": "Analyze neighborhood trends, price histories, and economic indicators to identify areas with rising property values. Track economic shifts to pinpoint high-growth zones before the competition.",
+        "metricTitle": "Neighborhood Yield",
+        "metricValue": "$84,210",
+        "delta": "↑ 14.2%",
+        "deltaNote": "vs last week",
+        "peak": "+16%"
+      },
+      "1": {
+        "num": "02",
+        "title": "Predictive Insights",
+        "desc": "Use AI-driven forecasting to spot properties that match your growth goals and investment criteria. Leverage modeling to identify off-market gems aligned with your long-term capital goals.",
+        "metricTitle": "Revenue",
+        "metricValue": "$96,437",
+        "delta": "↑ 18.4%",
+        "deltaNote": "vs last week",
+        "peak": "+20%"
+      },
+      "2": {
+        "num": "03",
+        "title": "Actionable Recommendations",
+        "desc": "Receive clear, data-backed suggestions on properties likely to deliver strong capital gains. Access data-backed investment roadmaps designed to maximize your portfolio's appreciation and yield.",
+        "metricTitle": "Projected Net Yield",
+        "metricValue": "$112,890",
+        "delta": "↑ 22.1%",
+        "deltaNote": "vs last week",
+        "peak": "+24%"
+      }
     },
-    "search": {
-      "typeLabel": "Property Type",
-      "typeAll": "All Types",
-      "typeVilla": "Villa",
-      "typeHouse": "Modern House",
-      "typePenthouse": "Penthouse",
-      "bedsLabel": "Bedrooms",
-      "bedsAny": "Any Bedrooms",
-      "beds3": "3+ Bedrooms",
-      "beds4": "4+ Bedrooms",
-      "beds5": "5+ Bedrooms",
-      "submit": "Find Residences"
+    "days": {
+      "0": "Mon",
+      "1": "Tue",
+      "2": "Wed",
+      "3": "Thu",
+      "4": "Fri",
+      "5": "Sat",
+      "6": "Sun"
     }
   },
   "featured": {
-    "eyebrow": "SIGNATURE RESIDENCE",
-    "title": "Solstice Cliffside Villa",
-    "subtitle": "A cantilevered limestone and floor-to-ceiling glass sanctuary suspended above the coastline, balancing open horizon views with sheltered courtyard calm.",
-    "cta": "Inspect Residence",
-    "specs": {
-      "areaLabel": "Living Area",
-      "areaValue": "680 m²",
-      "bedsLabel": "Bedrooms",
-      "bedsValue": "5 Suites",
-      "poolLabel": "Pool",
-      "poolValue": "22m Infinity",
-      "priceLabel": "Guide Price",
-      "priceValue": "On Request"
-    }
-  },
-  "properties": {
-    "eyebrow": "CURATED COLLECTION",
-    "title": "Residences for Private Acquisition",
-    "subtitle": "Every property in the AuraVilla portfolio is vetted for architectural provenance, natural daylight orientation, and long-term land value.",
-    "filters": {
-      "all": "All Residences",
-      "villa": "Villas",
-      "house": "Modern Houses",
-      "penthouse": "Penthouses",
-      "bedsLabel": "Bedrooms",
-      "sortLabel": "Sort By"
-    },
-    "sort": {
-      "featured": "Featured First",
-      "areaDesc": "Largest Area",
-      "bedsDesc": "Most Bedrooms"
-    },
+    "titleBefore": "Featured",
+    "titleAccent": "investment properties",
+    "subtitle": "Each property below represents a prime opportunity for strong capital gains and steady income.",
+    "prevAria": "Previous property",
+    "nextAria": "Next property",
+    "explore": "Explore",
+    "perMonth": "/month",
     "badges": {
-      "signature": "Signature",
-      "new": "New Listing",
-      "limited": "Private Release"
+      "underOffer": "Under Offer",
+      "rented": "Rented",
+      "forSale": "For Sale"
     },
     "specs": {
       "beds": "Beds",
       "baths": "Baths",
       "area": "m²"
     },
-    "viewDetails": "View Residence",
-    "emptyState": "No residences match the selected criteria. Adjust your filters to view the full collection.",
-    "resetFilter": "Reset Filters",
     "items": {
-      "solstice-cliff-villa": {
-        "title": "Solstice Cliffside Villa",
-        "location": "Coastal Ridge Enclave",
-        "price": "Upon Inquiry",
-        "summary": "Cantilevered oceanfront villa with double-height glazing, infinity pool, and seamless indoor-outdoor limestone terraces.",
-        "description": "Designed around uninterrupted coastal light, Solstice Cliffside Villa pairs monolithic white concrete planes with warm oak joinery and floor-to-ceiling low-iron glass. Three terraced levels step naturally toward a heated saltwater infinity pool and private sunset lounge.",
+      "villa-redwood": {
+        "title": "Villa Redwood, Malibu, CA",
+        "location": "Malibu Coastline, CA",
+        "summary": "Luxury coastal estate with high demand",
+        "price": "$4,800",
+        "priceSuffix": "/month",
+        "description": "Cantilevered coastal limestone and cedar residence overlooking the Pacific horizon, engineered for year-round indoor-outdoor living and sustained rental yield.",
+        "features": [
+          "Ocean-facing cantilevered limestone terrace",
+          "Heated infinity plunge pool & outdoor lounge",
+          "Double-height acoustic glass living salon",
+          "Turnkey smart climate & security integration"
+        ]
+      },
+      "cedar-pavilion": {
+        "title": "The Cedar Pavilion, Aspen, CO",
+        "location": "Aspen Highlands, CO",
+        "summary": "Mountain resort home in a growing enclave",
+        "price": "$3,200",
+        "priceSuffix": "/month",
+        "description": "Elevated alpine pavilion surrounded by mature evergreens, combining warm timber soffits, radiant stone floors, and panoramic mountain sightlines.",
+        "features": [
+          "270-degree mountain & forest glazing",
+          "Geothermal heated limestone deck",
+          "Private wine cellar & sunken hearth room",
+          "Direct trail access & heated 3-car bay"
+        ]
+      },
+      "skyline-edge": {
+        "title": "Skyline Edge, Brooklyn, NY",
+        "location": "Brooklyn Waterfront, NY",
+        "summary": "High-yield residence near transit and tech hubs",
+        "price": "$4,150",
+        "priceSuffix": "/month",
+        "description": "Minimalist urban townhouse featuring architectural concrete planes, private courtyard garden, and rapid connectivity to downtown innovation districts.",
+        "features": [
+          "Private landscaped reflection courtyard",
+          "Custom European oak kitchen & millwork",
+          "Acoustic triple-pane architectural glazing",
+          "Private rooftop terrace with skyline views"
+        ]
+      },
+      "solstice-cliff": {
+        "title": "Solstice Cliff Villa, Big Sur, CA",
+        "location": "Coastal Ridge, CA",
+        "summary": "Iconic oceanfront villa with strong appreciation",
+        "price": "$6,400",
+        "priceSuffix": "/month",
+        "description": "Suspended above a tranquil coastal bluff, Solstice Cliff Villa blends monolithic white concrete with floor-to-ceiling low-iron glass and private wellness amenities.",
         "features": [
           "22-meter heated saltwater infinity pool",
-          "Double-height ocean-view great room",
-          "Private wellness suite with sauna & plunge",
-          "Smart climate, lighting & acoustic glazing"
+          "Private spa suite with cedar sauna",
+          "Seamless indoor-outdoor travertine deck",
+          "Verified high-occupancy seasonal profile"
         ]
       },
-      "courtyard-travertine-house": {
-        "title": "Courtyard Travertine House",
-        "location": "Botanical Reserve District",
-        "price": "Upon Inquiry",
-        "summary": "Minimalist modern house organized around a tranquil reflection pond, oak timber louvers, and natural stone galleries.",
-        "description": "Built for quiet privacy in a lush residential enclave, this architectural house frames an interior reflection courtyard at its heart. Motorized oak louvers filter afternoon sunlight across honed travertine floors and custom gallery walls.",
+      "courtyard-travertine": {
+        "title": "Courtyard Travertine, Austin, TX",
+        "location": "Westlake Hills, TX",
+        "summary": "Modern courtyard residence with steady demand",
+        "price": "$3,850",
+        "priceSuffix": "/month",
+        "description": "Organized around a serene water mirror courtyard and oak louvers, this contemporary residence maximizes natural daylight while maintaining full street privacy.",
         "features": [
-          "Central reflection pond & Zen garden courtyard",
-          "Honed Roman travertine facade & flooring",
-          "Chef's monolithic stone kitchen & pantry",
-          "3-car subterranean gallery garage"
+          "Central reflection pond & shaded colonnade",
+          "Honed Roman travertine stone flooring",
+          "Solar-ready roof & battery backup",
+          "Detached architectural guest studio"
         ]
       },
-      "pinecrest-glass-pavilion": {
-        "title": "Pinecrest Glass Pavilion",
-        "location": "Highland Forest Sanctuary",
-        "price": "Upon Inquiry",
-        "summary": "Elevated hillside glass pavilion suspended among mature pines with a wrap-around timber deck and fireplace lounge.",
-        "description": "Anchored into a gentle wooded slope, Pinecrest Glass Pavilion floats quietly above the canopy. Expansive structural glass walls dissolve the boundary between the travertine living pavilion and the surrounding pine forest.",
+      "skyline-penthouse": {
+        "title": "Aura Sky Penthouse, Miami, FL",
+        "location": "Brickell Bayfront, FL",
+        "summary": "Full-floor sky villa with panoramic water views",
+        "price": "$5,900",
+        "priceSuffix": "/month",
+        "description": "Occupying an entire crown level above the bay, Aura Sky Penthouse delivers villa-scale proportions with a sunken terrace lounge and private elevator lobby.",
         "features": [
-          "Panoramic 270-degree hillside glass facade",
-          "Cantilevered teak & limestone viewing deck",
-          "Sunken travertine hearth & wine room",
-          "Geothermal radiant floor heating"
-        ]
-      },
-      "skyline-aura-penthouse": {
-        "title": "Skyline Aura Penthouse",
-        "location": "Central Waterfront Tower",
-        "price": "Upon Inquiry",
-        "summary": "Full-floor sky villa featuring a private sunken terrace lounge, reflective water court, and 360-degree horizon views.",
-        "description": "Occupying the entire crown of an architectural landmark, Skyline Aura Penthouse brings villa-scale proportions to elevated urban living. Private elevator access opens into a light-filled gallery extending onto a landscaped rooftop terrace.",
-        "features": [
-          "Private direct-keyed elevator lobby",
-          "Landscaped wrap-around sky terrace & sunken lounge",
-          "Bespoke Italian millwork & concealed kitchen",
-          "24/7 concierge & private climate-controlled storage"
-        ]
-      },
-      "horizon-infinity-estate": {
-        "title": "Horizon Infinity Estate",
-        "location": "Peninsula South Shore",
-        "price": "Upon Inquiry",
-        "summary": "Twilight-oriented contemporary estate featuring twin guest pavilions, sculptural water mirror, and private garden lawn.",
-        "description": "Conceived as a multi-generational compound, Horizon Infinity Estate pairs a dramatic main residence with two independent guest pavilions linked by covered stone colonnades and manicured reflecting pools.",
-        "features": [
-          "Main residence plus two detached guest pavilions",
-          "Outdoor summer kitchen & pergola dining terrace",
-          "Private home cinema & acoustic study",
-          "Solar-integrated roof & rainwater harvesting"
-        ]
-      },
-      "atrium-minimal-residence": {
-        "title": "Atrium Minimal Residence",
-        "location": "Heritage Park Avenue",
-        "price": "Upon Inquiry",
-        "summary": "Double-height interior sanctuary with a monolithic travertine fireplace, slatted oak ceiling, and private garden sanctuary.",
-        "description": "Combining urban convenience with serene residential proportions, Atrium Minimal Residence centers on a sunlit double-height living atrium. Custom bronze hardware, fluted timber paneling, and quiet courtyard glazing define every room.",
-        "features": [
-          "Double-height sunlit living atrium",
-          "Monolithic travertine fireplace centerpiece",
-          "Private landscaped rear garden & plunge pool",
-          "Dedicated architectural studio / library"
+          "Direct-keyed private elevator foyer",
+          "Sunken sunset lounge & water feature",
+          "24/7 concierge & private climate storage",
+          "High-demand corporate executive lease appeal"
         ]
       }
     }
+  },
+  "dream": {
+    "line1": "Invest Today in",
+    "accent": "\"a Dream",
+    "line2": "House",
+    "findMore": "Find more",
+    "cards": {
+      "0": {
+        "title": "Smart Property",
+        "desc": "AI-powered analysis identifies properties with the highest capital growth potential based on market trends and long-term value drivers."
+      },
+      "1": {
+        "title": "Growth Forecasting",
+        "desc": "Predict future property value appreciation using data-driven forecasts, historical performance, and real-time market indicators."
+      },
+      "2": {
+        "title": "Portfolio Optimization",
+        "desc": "Build and balance a real estate portfolio designed to maximize long-term asset growth while managing risk across locations."
+      }
+    }
+  },
+  "tools": {
+    "badge": "PORTFOLIO TOOLS",
+    "titleTop": "Omni-channel, any task,",
+    "titleAccent": "multi-language",
+    "subtitle": "Assistant offers a human-like service that effortlessly blends in your process, completing nearly any tasks and collaborating with your team within the platform.",
+    "unified": {
+      "title": "Unified dashboard",
+      "desc": "Track all your properties, income, and growth metrics in one intuitive interface.",
+      "chartTitle": "Market Trends",
+      "chartPeak": "$300k",
+      "weeklyTitle": "Weekly schedule"
+    },
+    "collaborative": {
+      "title": "Collaborative",
+      "desc": "Sub-agents work together seamlessly to handle complex scenarios, achieving superior results."
+    },
+    "sustainable": {
+      "badge": "SUSTAINABLE",
+      "titleLine1": "Smart homes.",
+      "titleLine2": "Smarter investments",
+      "desc": "Data-driven insights to help you secure the best eco-homes for the short-term rental market. High demand. High returns.",
+      "price1": "$920,000",
+      "price2": "$832,500",
+      "price3": "$959,000"
+    },
+    "empire": {
+      "title": "From single assets to a rental empire",
+      "desc": "Our coordinated advisory tools handle the complexities of property management, leaving you with nothing but consistent monthly returns.",
+      "cta": "Start investing",
+      "widgetTitle": "Lead Performing Agents",
+      "agent1Name": "Emily Gray",
+      "agent1Tag": "Top",
+      "agent1Value": "$421,376",
+      "agent2Name": "Bruce Walker",
+      "agent2Value": "$242,491"
+    }
+  },
+  "footer": {
+    "brandName": "auravilla",
+    "tagline": "From property search to portfolio growth.",
+    "col1Title": "Products",
+    "col1Links": {
+      "0": "Investment Finder",
+      "1": "Rental Yield Calculator",
+      "2": "Portfolio Manager",
+      "3": "Market Heatmaps",
+      "4": "Tax Optimization"
+    },
+    "col2Title": "Customers",
+    "col2Links": {
+      "0": "Investor Success Stories",
+      "1": "Property Management Guide",
+      "2": "Market Reports",
+      "3": "Webinars"
+    },
+    "col3Title": "Company",
+    "col3Links": {
+      "0": "About Us",
+      "1": "Partnership Program",
+      "2": "Legal Compliance",
+      "3": "Careers",
+      "4": "Contact Us"
+    },
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "copyright": "© 2026 AuraVilla. All Rights Reserved."
   },
   "modal": {
-    "close": "Close residence details",
-    "specsTitle": "Key Specifications",
+    "close": "Close dialog",
+    "specsTitle": "Residence Specifications",
     "featuresTitle": "Architectural Highlights",
-    "scheduleCta": "Schedule Private Viewing",
-    "areaUnit": "m²"
+    "scheduleCta": "Schedule Private Viewing"
   },
-  "architecture": {
-    "eyebrow": "ARCHITECTURAL PHILOSOPHY",
-    "title": "Built with Restraint, Material Honesty & Light",
-    "subtitle": "We represent homes where architecture elevates daily life—favoring enduring stone, warm timber, passive orientation, and spatial calm over fleeting trends.",
-    "pillars": {
-      "0": {
-        "title": "01 / Material Permanence",
-        "desc": "Honed limestone, architectural concrete, brushed bronze, and sustainably sourced oak selected to age gracefully over decades."
-      },
-      "1": {
-        "title": "02 / Daylight & Orientation",
-        "desc": "Every floor plan is evaluated for cross-ventilation, solar shading, and calm sightlines linking interior rooms to gardens or horizon views."
-      },
-      "2": {
-        "title": "03 / Discreet Ownership",
-        "desc": "Private gated thresholds, acoustic glazing, and verified legal due diligence ensure effortless acquisition and peaceful long-term living."
-      }
-    }
-  },
-  "process": {
-    "eyebrow": "ACQUISITION JOURNEY",
-    "title": "A Discreet Path to Ownership",
-    "subtitle": "From private dossier review to architectural walkthroughs and legal closing, our advisory team coordinates every milestone.",
-    "steps": {
-      "0": {
-        "title": "Private Brief",
-        "desc": "Share your preferred location, architectural style, spatial requirements, and acquisition timeline."
-      },
-      "1": {
-        "title": "Curated Shortlist",
-        "desc": "Receive confidential dossiers with floor plans, sun studies, material specs, and transparent pricing."
-      },
-      "2": {
-        "title": "Private Walkthrough",
-        "desc": "Experience each residence at your own pace during an unhurried, appointment-only architectural tour."
-      },
-      "3": {
-        "title": "Seamless Closing",
-        "desc": "Independent legal, technical, and title verification support through handover and post-closing care."
-      }
-    }
-  },
-  "contact": {
+  "inquiry": {
     "eyebrow": "PRIVATE ADVISORY",
-    "title": "Request a Dossier or Schedule a Viewing",
-    "subtitle": "Connect with an AuraVilla specialist to receive floor plans, pricing guides, or arrange an appointment-only visit.",
-    "hoursLabel": "Advisory Hours",
-    "hoursValue": "Mon – Sun · 09:00 – 19:00",
-    "emailLabel": "Advisory Email",
-    "phoneLabel": "Private Line",
-    "officeLabel": "Showroom",
-    "officeValue": "Private Showroom — By Appointment",
-    "form": {
-      "nameLabel": "Full Name",
-      "namePlaceholder": "Enter your full name",
-      "emailLabel": "Email Address",
-      "emailPlaceholder": "you@example.com",
-      "phoneLabel": "Phone / WhatsApp (Optional)",
-      "phonePlaceholder": "+1 (000) 000-0000",
-      "propertyLabel": "Residence of Interest",
-      "propertyPlaceholder": "Select a residence",
-      "propertyGeneral": "General Portfolio Consultation",
-      "messageLabel": "Preferred Dates & Notes",
-      "messagePlaceholder": "Share preferred viewing dates, layout needs, or questions...",
-      "submit": "Request Private Viewing"
-    },
+    "title": "Schedule a Private Viewing or Investment Dossier",
+    "subtitle": "Leave your contact details and preferred property to receive floor plans, yield projections, and private appointment options.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "you@example.com",
+    "propertyLabel": "Property of Interest",
+    "propertyPlaceholder": "Select a residence",
+    "propertyGeneral": "General Portfolio Consultation",
+    "notesLabel": "Preferred Dates & Goals",
+    "notesPlaceholder": "Share preferred viewing dates or investment criteria...",
+    "submit": "Submit Inquiry",
+    "demoNote": "Static preview form — validated locally in your browser.",
     "validation": {
       "nameRequired": "Please enter your full name.",
       "emailInvalid": "Please enter a valid email address.",
-      "propertyRequired": "Please select a residence or consultation option."
+      "propertyRequired": "Please select a property or consultation option."
     },
-    "successMessage": "Thank you. Your private inquiry has been recorded in this preview session. Our advisory desk will follow up regarding your selected residence.",
-    "demoNote": "Static preview form — submissions are validated locally in your browser."
-  },
-  "footer": {
-    "tagline": "Architectural houses, villas & private real estate curated for enduring living.",
-    "quickLinks": "Navigation",
-    "languages": "Language",
-    "copyright": "© 2026 AuraVilla. Real Estate Showcase.",
-    "backToTop": "Back to top"
+    "successMessage": "Thank you. Your private inquiry has been recorded in this preview session."
   }
 }

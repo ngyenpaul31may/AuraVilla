@@ -76,6 +76,19 @@
       }
     }
 
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle && typeof titleText === "string" && titleText) {
+      ogTitle.setAttribute("content", titleText);
+    }
+
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) {
+      const descText = t("meta.description", ogDesc.getAttribute("content") || "");
+      if (typeof descText === "string" && descText) {
+        ogDesc.setAttribute("content", descText);
+      }
+    }
+
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
       const value = t(key);
@@ -133,10 +146,14 @@
       applyTranslations();
     } catch (err) {
       if (seq !== state.requestSeq) return;
-      // Keep pre-rendered English HTML intact if fetch fails (e.g. file://)
+      // Keep pre-rendered English HTML or revert to loaded English baseline if fetch fails
       console.warn("[AuraI18n]", err.message);
       state.lang = DEFAULT_LANG;
       document.documentElement.lang = DEFAULT_LANG;
+      if (Object.keys(state.fallback).length) {
+        state.messages = state.fallback;
+        applyTranslations();
+      }
     }
 
     window.dispatchEvent(

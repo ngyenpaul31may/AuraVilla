@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "AuraVilla | Nhà Ở Kiến Trúc, Biệt Thự & Bất Động Sản Cao Cấp",
-    "description": "AuraVilla giới thiệu các ngôi nhà kiến trúc, biệt thự riêng tư và penthouse cao cấp được tuyển chọn cho trải nghiệm sống bền vững."
+    "title": "AuraVilla | Đầu Tư Bất Động Sản Kiến Trúc & Biệt Thự Hiện Đại",
+    "description": "Khám phá các cơ hội đầu tư bất động sản tăng trưởng cao, biệt thự tuyển chọn và nhà ở hiện đại hỗ trợ đa ngôn ngữ."
   },
   "theme": {
     "light": "Sáng",
@@ -10,256 +10,295 @@
     "switchToLight": "Chuyển sang giao diện sáng"
   },
   "nav": {
-    "collections": "Nổi bật",
+    "home": "Trang chủ",
+    "features": "Tính năng",
     "properties": "Bất động sản",
-    "architecture": "Kiến trúc",
-    "process": "Quy trình",
-    "contact": "Tư vấn",
-    "cta": "Đặt lịch xem",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
     "menuOpen": "Mở menu điều hướng",
     "menuClose": "Đóng menu điều hướng"
   },
   "hero": {
-    "eyebrow": "BẤT ĐỘNG SẢN KIẾN TRÚC RIÊNG TƯ",
-    "title": "Biệt Thự & Nhà Ở Kiến Trúc Đương Đại",
-    "subtitle": "Khám phá bộ sưu tập nhà phố hiện đại, biệt thự hướng biển và penthouse được chế tác từ đá tự nhiên, kính toàn phần và tỷ lệ không gian chuẩn mực.",
-    "ctaPrimary": "Khám phá nhà & biệt thự",
-    "ctaSecondary": "Tư vấn riêng",
-    "stats": {
-      "residencesValue": "24+",
-      "residencesLabel": "Bất động sản tuyển chọn",
-      "districtsValue": "06",
-      "districtsLabel": "Phân khu đắc địa",
-      "privateValue": "100%",
-      "privateLabel": "Xem nhà riêng tư"
+    "titleBefore": "Khám phá cơ hội đầu tư",
+    "titleAccent": "bất động sản",
+    "cta": "Bắt đầu đầu tư ngay",
+    "occupancyTitle": "Tỷ lệ lấp đầy",
+    "occupancyTotal": "74",
+    "occupancyUnit": "Căn nhà",
+    "rented": "Đang thuê",
+    "maintenance": "Bảo trì",
+    "vacant": "Còn trống",
+    "advisorName": "Bruce Walker",
+    "advisorValue": "$242,491",
+    "closed": "Đã chốt",
+    "projected": "Dự kiến"
+  },
+  "insights": {
+    "badge1": "ĐẦU TƯ",
+    "badge2": "ĐỘC QUYỀN",
+    "titleBefore": "Phân tích bất động sản",
+    "titleAccent": "bằng dữ liệu",
+    "subtitle": "Nền tảng của chúng tôi ứng dụng phân tích thông minh và xu hướng thị trường để giúp bạn tìm ra các bất động sản tiềm năng cao, kết hợp dữ liệu thời gian thực và biểu đồ trực quan.",
+    "tabs": {
+      "0": {
+        "num": "01",
+        "title": "Phân tích thị trường",
+        "desc": "Đánh giá xu hướng từng khu vực, lịch sử giá và chỉ số kinh tế để nhận diện những vùng có tốc độ tăng giá bất động sản vượt trội trước đối thủ.",
+        "metricTitle": "Lợi suất khu vực",
+        "metricValue": "$84,210",
+        "delta": "↑ 14.2%",
+        "deltaNote": "so với tuần trước",
+        "peak": "+16%"
+      },
+      "1": {
+        "num": "02",
+        "title": "Dự báo thông minh",
+        "desc": "Sử dụng mô hình dự báo AI để phát hiện những ngôi nhà phù hợp với mục tiêu tăng trưởng vốn, bao gồm cả các sản phẩm ngoài thị trường.",
+        "metricTitle": "Doanh thu",
+        "metricValue": "$96,437",
+        "delta": "↑ 18.4%",
+        "deltaNote": "so với tuần trước",
+        "peak": "+20%"
+      },
+      "2": {
+        "num": "03",
+        "title": "Đề xuất hành động",
+        "desc": "Nhận gợi ý rõ ràng dựa trên dữ liệu về những căn nhà và biệt thự có biên độ tăng giá tốt cùng lộ trình tối ưu lợi suất dài hạn.",
+        "metricTitle": "Lợi nhuận ròng dự kiến",
+        "metricValue": "$112,890",
+        "delta": "↑ 22.1%",
+        "deltaNote": "so với tuần trước",
+        "peak": "+24%"
+      }
     },
-    "search": {
-      "typeLabel": "Loại hình",
-      "typeAll": "Tất cả loại hình",
-      "typeVilla": "Biệt thự",
-      "typeHouse": "Nhà hiện đại",
-      "typePenthouse": "Penthouse",
-      "bedsLabel": "Phòng ngủ",
-      "bedsAny": "Mọi số phòng",
-      "beds3": "Từ 3 phòng ngủ",
-      "beds4": "Từ 4 phòng ngủ",
-      "beds5": "Từ 5 phòng ngủ",
-      "submit": "Tìm bất động sản"
+    "days": {
+      "0": "T2",
+      "1": "T3",
+      "2": "T4",
+      "3": "T5",
+      "4": "T6",
+      "5": "T7",
+      "6": "CN"
     }
   },
   "featured": {
-    "eyebrow": "CĂN NHÀ TIÊU BIỂU",
-    "title": "Solstice Cliffside Villa",
-    "subtitle": "Tuyệt tác biệt thự đá vôi và kính toàn phần vươn mình trên triền đá ven biển, cân bằng hoàn hảo giữa tầm nhìn chân trời và khoảng sân trong tĩnh tại.",
-    "cta": "Xem hồ sơ căn nhà",
-    "specs": {
-      "areaLabel": "Diện tích sử dụng",
-      "areaValue": "680 m²",
-      "bedsLabel": "Phòng ngủ",
-      "bedsValue": "5 Phòng lớn",
-      "poolLabel": "Hồ bơi",
-      "poolValue": "Vô cực 22m",
-      "priceLabel": "Giá tham khảo",
-      "priceValue": "Theo yêu cầu"
-    }
-  },
-  "properties": {
-    "eyebrow": "BỘ SƯU TẬP TUYỂN CHỌN",
-    "title": "Danh Mục Nhà & Biệt Thự Chào Bán",
-    "subtitle": "Mỗi bất động sản tại AuraVilla đều được thẩm định kỹ lưỡng về giá trị kiến trúc, hướng nắng gió tự nhiên và tiềm năng gia tăng giá trị đất lâu dài.",
-    "filters": {
-      "all": "Tất cả",
-      "villa": "Biệt thự",
-      "house": "Nhà hiện đại",
-      "penthouse": "Penthouse",
-      "bedsLabel": "Phòng ngủ",
-      "sortLabel": "Sắp xếp"
-    },
-    "sort": {
-      "featured": "Ưu tiên nổi bật",
-      "areaDesc": "Diện tích lớn nhất",
-      "bedsDesc": "Nhiều phòng ngủ nhất"
-    },
+    "titleBefore": "Bất động sản",
+    "titleAccent": "đầu tư nổi bật",
+    "subtitle": "Mỗi ngôi nhà dưới đây là một cơ hội đắt giá cho tăng trưởng tài sản và dòng tiền ổn định.",
+    "prevAria": "Bất động sản trước",
+    "nextAria": "Bất động sản tiếp theo",
+    "explore": "Khám phá",
+    "perMonth": "/tháng",
     "badges": {
-      "signature": "Độc bản",
-      "new": "Mới mở bán",
-      "limited": "Giới hạn"
+      "underOffer": "Đang thương lượng",
+      "rented": "Đã cho thuê",
+      "forSale": "Đang chào bán"
     },
     "specs": {
       "beds": "PN",
       "baths": "WC",
       "area": "m²"
     },
-    "viewDetails": "Xem chi tiết",
-    "emptyState": "Không có căn nhà nào phù hợp với bộ lọc hiện tại. Vui lòng điều chỉnh để xem toàn bộ danh mục.",
-    "resetFilter": "Đặt lại bộ lọc",
     "items": {
-      "solstice-cliff-villa": {
-        "title": "Solstice Cliffside Villa",
-        "location": "Phân khu Triền Đá Ven Biển",
-        "price": "Liên hệ nhận báo giá",
-        "summary": "Biệt thự ven biển thiết kế vươn khối với kính thông tầng, hồ bơi vô cực và hiên đá vôi kết nối mượt mà trong - ngoài.",
-        "description": "Được kiến tạo để đón trọn ánh sáng ven biển, Solstice Cliffside Villa kết hợp các mảng bê tông trắng nguyên khối với nội thất gỗ sồi ấm và kính khổ lớn. Ba tầng giật cấp hướng thẳng ra hồ bơi nước mặn vô cực và khu thư giãn ngắm hoàng hôn.",
+      "villa-redwood": {
+        "title": "Villa Redwood, Malibu, CA",
+        "location": "Bờ biển Malibu, CA",
+        "summary": "Biệt thự ven biển cao cấp nhu cầu thuê cao",
+        "price": "$4,800",
+        "priceSuffix": "/tháng",
+        "description": "Biệt thự đá vôi và gỗ tuyết tùng thiết kế vươn khối nhìn ra Thái Bình Dương, tối ưu trải nghiệm sống trong - ngoài và hiệu suất khai thác dài hạn.",
+        "features": [
+          "Hiên đá vôi vươn khối hướng biển",
+          "Hồ bơi vô cực gia nhiệt & khu lounge ngoài trời",
+          "Phòng khách kính thông tầng cách âm",
+          "Hệ thống điều khiển khí hậu & an ninh thông minh"
+        ]
+      },
+      "cedar-pavilion": {
+        "title": "The Cedar Pavilion, Aspen, CO",
+        "location": "Aspen Highlands, CO",
+        "summary": "Nhà nghỉ dưỡng vùng núi tại khu vực tăng trưởng",
+        "price": "$3,200",
+        "priceSuffix": "/tháng",
+        "description": "Pavilion vùng núi ẩn mình giữa rừng thông xanh mát, kết hợp trần gỗ ấm áp, sàn đá sưởi nhiệt và tầm nhìn toàn cảnh dãy núi.",
+        "features": [
+          "Mặt kính toàn cảnh 270 độ hướng rừng thông",
+          "Sàn đá vôi sưởi địa nhiệt",
+          "Hầm rượu riêng & phòng khách lò sưởi hạ cốt",
+          "Lối tiếp cận đường mòn trực tiếp & gara 3 xe"
+        ]
+      },
+      "skyline-edge": {
+        "title": "Skyline Edge, Brooklyn, NY",
+        "location": "Ven sông Brooklyn, NY",
+        "summary": "Nhà phố lợi suất cao gần trung tâm công nghệ",
+        "price": "$4,150",
+        "priceSuffix": "/tháng",
+        "description": "Nhà phố đương đại tối giản với các mảng bê tông kiến trúc, sân vườn phản chiếu riêng tư và kết nối nhanh tới các trung tâm tài chính.",
+        "features": [
+          "Sân vườn hồ phản chiếu riêng tư",
+          "Nội thất bếp gỗ sồi châu Âu thiết kế riêng",
+          "Kính kiến trúc 3 lớp cách âm tiêu chuẩn cao",
+          "Sân thượng ngắm đường chân trời thành phố"
+        ]
+      },
+      "solstice-cliff": {
+        "title": "Solstice Cliff Villa, Big Sur, CA",
+        "location": "Triền đá ven biển, CA",
+        "summary": "Biệt thự triền đá biểu tượng tăng giá bền vững",
+        "price": "$6,400",
+        "priceSuffix": "/tháng",
+        "description": "Tọa lạc trên triền đá ven biển yên bình, Solstice Cliff Villa kết hợp bê tông trắng nguyên khối, kính khổ lớn và tổ hợp thư giãn riêng biệt.",
         "features": [
           "Hồ bơi vô cực nước mặn gia nhiệt dài 22m",
-          "Phòng khách thông tầng hướng biển toàn cảnh",
-          "Khu chăm sóc sức khỏe riêng kèm sauna & bể ngâm",
-          "Hệ thống kính cách âm, điều khiển ánh sáng thông minh"
+          "Khu spa riêng với phòng xông hơi gỗ tuyết tùng",
+          "Sàn đá travertine nối liền không gian trong ngoài",
+          "Tỷ lệ lấp đầy ổn định quanh năm"
         ]
       },
-      "courtyard-travertine-house": {
-        "title": "Courtyard Travertine House",
-        "location": "Khu Biệt Lập Vườn Thực Vật",
-        "price": "Liên hệ nhận báo giá",
-        "summary": "Ngôi nhà hiện đại tối giản xoay quanh hồ phản chiếu tĩnh lặng, hệ lam gỗ sồi và những hành lang đá tự nhiên.",
-        "description": "Tối ưu sự riêng tư giữa khu dân cư xanh mát, ngôi nhà bố trí một khoảng sân hồ phản chiếu ngay tại tâm công trình. Hệ lam gỗ sồi điều chỉnh tự động giúp lọc nắng chiều dịu nhẹ lên nền đá travertine mài mịn.",
+      "courtyard-travertine": {
+        "title": "Courtyard Travertine, Austin, TX",
+        "location": "Westlake Hills, TX",
+        "summary": "Nhà ở sân trong hiện đại thanh khoản tốt",
+        "price": "$3,850",
+        "priceSuffix": "/tháng",
+        "description": "Quy hoạch quanh hồ nước phản chiếu trung tâm và hệ lam gỗ sồi, ngôi nhà đón trọn ánh sáng tự nhiên mà vẫn giữ được sự kín đáo tuyệt đối.",
         "features": [
-          "Hồ phản chiếu trung tâm & sân vườn thiền tĩnh tại",
-          "Mặt đứng và sàn hoàn thiện bằng đá travertine tự nhiên",
-          "Khu bếp đảo đá nguyên khối kèm phòng kho bếp riêng",
-          "Gara ngầm sức chứa 3 xe chuẩn gallery"
+          "Hồ phản chiếu trung tâm & hàng hiên có mái che",
+          "Sàn đá travertine La Mã mài mịn",
+          "Hệ mái sẵn sàng năng lượng mặt trời & pin lưu trữ",
+          "Pavilion khách tách biệt chuẩn kiến trúc"
         ]
       },
-      "pinecrest-glass-pavilion": {
-        "title": "Pinecrest Glass Pavilion",
-        "location": "Khu Đồi Thông Sinh Thái",
-        "price": "Liên hệ nhận báo giá",
-        "summary": "Pavilion kính trên triền đồi ẩn mình giữa rừng thông, sở hữu sàn gỗ vươn tán và phòng khách lò sưởi ấm cúng.",
-        "description": "Nương theo độ dốc tự nhiên của triền đồi, Pinecrest Glass Pavilion như lơ lửng giữa tầng tán thông xanh. Vách kính kết cấu lớn xóa nhòa ranh giới giữa không gian tiếp khách đá tự nhiên và thiên nhiên bên ngoài.",
-        "features": [
-          "Mặt kính toàn cảnh 270 độ ôm trọn triền đồi",
-          "Hiên gỗ teak và đá vôi vươn ra thung lũng",
-          "Phòng khách lò sưởi đá hạ cốt & hầm rượu riêng",
-          "Hệ thống sưởi sàn địa nhiệt tiết kiệm năng lượng"
-        ]
-      },
-      "skyline-aura-penthouse": {
-        "title": "Skyline Aura Penthouse",
-        "location": "Tháp Ven Sông Trung Tâm",
-        "price": "Liên hệ nhận báo giá",
-        "summary": "Sky-villa chiếm trọn tầng đỉnh với sân vườn hạ cốt trên cao, hồ cảnh quan và tầm nhìn 360 độ toàn thành phố.",
-        "description": "Chiếm trọn tầng cao nhất của tòa tháp biểu tượng, Skyline Aura Penthouse mang tỷ lệ rộng rãi của một biệt thự mặt đất lên không trung. Thang máy riêng mở thẳng vào sảnh trưng bày nối liền sân thượng xanh mát.",
+      "skyline-penthouse": {
+        "title": "Aura Sky Penthouse, Miami, FL",
+        "location": "Vịnh Brickell, FL",
+        "summary": "Sky-villa trọn tầng tầm nhìn toàn cảnh vịnh",
+        "price": "$5,900",
+        "priceSuffix": "/tháng",
+        "description": "Chiếm trọn tầng cao nhất hướng vịnh, Aura Sky Penthouse mang tỷ lệ rộng rãi của biệt thự mặt đất lên không trung với sảnh thang máy riêng.",
         "features": [
           "Sảnh thang máy riêng bảo mật bằng thẻ từ",
-          "Sân thượng cảnh quan bao quanh & lounge hạ cốt",
-          "Nội thất gỗ thiết kế riêng và hệ bếp âm tường",
-          "Đặc quyền concierge 24/7 và kho lưu trữ riêng"
-        ]
-      },
-      "horizon-infinity-estate": {
-        "title": "Horizon Infinity Estate",
-        "location": "Mũi Nam Bán Đảo",
-        "price": "Liên hệ nhận báo giá",
-        "summary": "Dinh thự đương đại gồm nhà chính, hai pavilion khách tách biệt, mặt nước điêu khắc và thảm cỏ sân vườn rộng.",
-        "description": "Được quy hoạch như một dinh thự đa thế hệ, Horizon Infinity Estate kết hợp khối nhà chính bề thế với hai khu pavilion dành cho khách liên kết qua hàng hiên đá có mái che và hồ cảnh quan.",
-        "features": [
-          "Khối nhà chính cùng 2 pavilion khách độc lập",
-          "Bếp ngoài trời và giàn pergola dùng bữa sân vườn",
-          "Phòng chiếu phim gia đình và phòng làm việc cách âm",
-          "Mái tích hợp năng lượng mặt trời & thu hồi nước mưa"
-        ]
-      },
-      "atrium-minimal-residence": {
-        "title": "Atrium Minimal Residence",
-        "location": "Đại Lộ Công Viên Di Sản",
-        "price": "Liên hệ nhận báo giá",
-        "summary": "Không gian sống thông tầng với lò sưởi đá travertine nguyên khối, trần lam gỗ sồi và sân vườn riêng yên tĩnh.",
-        "description": "Kết hợp sự thuận tiện nơi trung tâm với nhịp sống thư thái, Atrium Minimal Residence lấy khoảng thông tầng tràn ngập ánh sáng làm điểm nhấn. Chi tiết đồng xước, vách gỗ xẻ rãnh và cửa kính sân vườn tạo nên chiều sâu tinh tế.",
-        "features": [
-          "Phòng khách thông tầng đón sáng tự nhiên",
-          "Lò sưởi đá travertine nguyên khối làm tâm điểm",
-          "Sân vườn sau riêng tư kèm hồ bơi thư giãn",
-          "Phòng thư viện / studio kiến trúc riêng biệt"
+          "Lounge hạ cốt ngoài trời & tiểu cảnh nước",
+          "Dịch vụ concierge 24/7 và kho lưu trữ riêng",
+          "Thu hút mạnh khách thuê chuyên gia cấp cao"
         ]
       }
     }
+  },
+  "dream": {
+    "line1": "Đầu tư ngay vào",
+    "accent": "\"Ngôi nhà",
+    "line2": "Mơ ước",
+    "findMore": "Tìm hiểu thêm",
+    "cards": {
+      "0": {
+        "title": "Bất động sản thông minh",
+        "desc": "Phân tích AI giúp nhận diện các căn nhà có tiềm năng tăng giá vốn cao nhất dựa trên xu hướng thị trường và động lực giá trị dài hạn."
+      },
+      "1": {
+        "title": "Dự báo tăng trưởng",
+        "desc": "Dự đoán biên độ tăng giá bất động sản trong tương lai bằng mô hình dữ liệu, hiệu suất lịch sử và chỉ báo thị trường thời gian thực."
+      },
+      "2": {
+        "title": "Tối ưu danh mục",
+        "desc": "Xây dựng và cân bằng danh mục bất động sản nhằm tối đa hóa tăng trưởng tài sản dài hạn đồng thời kiểm soát rủi ro đa khu vực."
+      }
+    }
+  },
+  "tools": {
+    "badge": "CÔNG CỤ DANH MỤC",
+    "titleTop": "Đa kênh, mọi tác vụ,",
+    "titleAccent": "đa ngôn ngữ",
+    "subtitle": "Trợ lý số mang lại trải nghiệm tự nhiên, hòa nhập liền mạch vào quy trình đầu tư, hoàn thành mọi tác vụ và phối hợp cùng đội ngũ ngay trên nền tảng.",
+    "unified": {
+      "title": "Bảng điều khiển hợp nhất",
+      "desc": "Theo dõi toàn bộ bất động sản, dòng tiền và chỉ số tăng trưởng trên một giao diện trực quan.",
+      "chartTitle": "Xu hướng thị trường",
+      "chartPeak": "$300k",
+      "weeklyTitle": "Lịch tuần"
+    },
+    "collaborative": {
+      "title": "Phối hợp đa tác nhân",
+      "desc": "Các trợ lý chuyên biệt phối hợp nhịp nhàng để xử lý kịch bản phức tạp và đạt kết quả vượt trội."
+    },
+    "sustainable": {
+      "badge": "BỀN VỮNG",
+      "titleLine1": "Nhà thông minh.",
+      "titleLine2": "Đầu tư thông thái",
+      "desc": "Dữ liệu chuyên sâu giúp bạn chọn đúng những ngôi nhà sinh thái tối ưu cho thị trường cho thuê ngắn hạn. Nhu cầu cao, lợi suất cao.",
+      "price1": "$920,000",
+      "price2": "$832,500",
+      "price3": "$959,000"
+    },
+    "empire": {
+      "title": "Từ một căn nhà đến đế chế cho thuê",
+      "desc": "Hệ thống điều phối thông minh xử lý trọn vẹn sự phức tạp trong quản lý bất động sản, mang lại dòng tiền hàng tháng ổn định cho bạn.",
+      "cta": "Bắt đầu đầu tư",
+      "widgetTitle": "Chuyên viên dẫn đầu hiệu suất",
+      "agent1Name": "Emily Gray",
+      "agent1Tag": "Top",
+      "agent1Value": "$421,376",
+      "agent2Name": "Bruce Walker",
+      "agent2Value": "$242,491"
+    }
+  },
+  "footer": {
+    "brandName": "auravilla",
+    "tagline": "Từ tìm kiếm ngôi nhà đầu tiên đến mở rộng danh mục.",
+    "col1Title": "Sản phẩm",
+    "col1Links": {
+      "0": "Tìm kiếm cơ hội đầu tư",
+      "1": "Tính lợi suất cho thuê",
+      "2": "Quản lý danh mục",
+      "3": "Bản đồ nhiệt thị trường",
+      "4": "Tối ưu thuế bất động sản"
+    },
+    "col2Title": "Khách hàng",
+    "col2Links": {
+      "0": "Câu chuyện nhà đầu tư",
+      "1": "Hướng dẫn quản lý nhà",
+      "2": "Báo cáo thị trường",
+      "3": "Hội thảo trực tuyến"
+    },
+    "col3Title": "Công ty",
+    "col3Links": {
+      "0": "Về chúng tôi",
+      "1": "Chương trình đối tác",
+      "2": "Tuân thủ pháp lý",
+      "3": "Tuyển dụng",
+      "4": "Liên hệ"
+    },
+    "terms": "Điều khoản sử dụng",
+    "privacy": "Chính sách bảo mật",
+    "copyright": "© 2026 AuraVilla. Bảo lưu mọi quyền."
   },
   "modal": {
-    "close": "Đóng chi tiết bất động sản",
-    "specsTitle": "Thông số chính",
+    "close": "Đóng cửa sổ",
+    "specsTitle": "Thông số căn nhà",
     "featuresTitle": "Điểm nhấn kiến trúc",
-    "scheduleCta": "Đặt lịch xem căn này",
-    "areaUnit": "m²"
+    "scheduleCta": "Đặt lịch xem nhà riêng"
   },
-  "architecture": {
-    "eyebrow": "TRIẾT LÝ KIẾN TRÚC",
-    "title": "Tiết Chế Tinh Tế, Vật Liệu Thật & Ánh Sáng",
-    "subtitle": "Chúng tôi lựa chọn những ngôi nhà nơi kiến trúc nâng tầm đời sống thường nhật—ưu tiên đá tự nhiên, gỗ ấm, thông gió thụ động và sự tĩnh tại vượt thời gian.",
-    "pillars": {
-      "0": {
-        "title": "01 / Vật liệu bền vững",
-        "desc": "Đá vôi mài mờ, bê tông kiến trúc, đồng xước và gỗ sồi tự nhiên được tuyển chọn để càng sử dụng càng đẹp theo năm tháng."
-      },
-      "1": {
-        "title": "02 / Ánh sáng & Hướng nhà",
-        "desc": "Mỗi mặt bằng đều được đánh giá khả năng thông gió chéo, che nắng hợp lý và tầm nhìn kết nối phòng ở với sân vườn hoặc chân trời."
-      },
-      "2": {
-        "title": "03 / Sở hữu riêng tư",
-        "desc": "Lối vào biệt lập, kính cách âm tiêu chuẩn cao và hồ sơ pháp lý minh bạch đảm bảo quá trình giao dịch và an cư trọn vẹn."
-      }
-    }
-  },
-  "process": {
-    "eyebrow": "HÀNH TRÌNH SỞ HỮU",
-    "title": "Quy Trình Tư Vấn & Bàn Giao Chuẩn Mực",
-    "subtitle": "Từ bước trao đổi nhu cầu ban đầu đến khảo sát thực tế và hoàn tất pháp lý, đội ngũ tư vấn đồng hành xuyên suốt mọi giai đoạn.",
-    "steps": {
-      "0": {
-        "title": "Trao đổi nhu cầu",
-        "desc": "Chia sẻ khu vực mong muốn, phong cách kiến trúc, quy mô diện tích và kế hoạch sở hữu của bạn."
-      },
-      "1": {
-        "title": "Tuyển chọn danh mục",
-        "desc": "Nhận hồ sơ mật gồm bản vẽ mặt bằng, hướng nắng, thông số vật liệu và khung giá tham khảo."
-      },
-      "2": {
-        "title": "Tham quan riêng tư",
-        "desc": "Trải nghiệm từng ngôi nhà theo lịch hẹn riêng biệt, không gian yên tĩnh để cảm nhận trọn vẹn công trình."
-      },
-      "3": {
-        "title": "Bàn giao trọn vẹn",
-        "desc": "Hỗ trợ thẩm định pháp lý, kỹ thuật độc lập cho tới khi hoàn tất sang tên và chăm sóc sau bàn giao."
-      }
-    }
-  },
-  "contact": {
+  "inquiry": {
     "eyebrow": "TƯ VẤN RIÊNG",
-    "title": "Nhận Hồ Sơ Nhà Hoặc Đặt Lịch Tham Quan",
-    "subtitle": "Kết nối với chuyên viên AuraVilla để nhận bản vẽ mặt bằng, thông tin giá chi tiết hoặc sắp xếp buổi xem nhà theo lịch hẹn.",
-    "hoursLabel": "Giờ làm việc",
-    "hoursValue": "Thứ 2 – Chủ Nhật · 09:00 – 19:00",
-    "emailLabel": "Email tư vấn",
-    "phoneLabel": "Đường dây riêng",
-    "officeLabel": "Phòng trưng bày",
-    "officeValue": "Phòng trưng bày riêng — Tiếp khách theo lịch hẹn",
-    "form": {
-      "nameLabel": "Họ và tên",
-      "namePlaceholder": "Nhập họ và tên của bạn",
-      "emailLabel": "Địa chỉ Email",
-      "emailPlaceholder": "you@example.com",
-      "phoneLabel": "Số điện thoại / WhatsApp (Không bắt buộc)",
-      "phonePlaceholder": "+1 (000) 000-0000",
-      "propertyLabel": "Bất động sản quan tâm",
-      "propertyPlaceholder": "Chọn một bất động sản",
-      "propertyGeneral": "Tư vấn tổng quan danh mục AuraVilla",
-      "messageLabel": "Thời gian dự kiến & Ghi chú",
-      "messagePlaceholder": "Chia sẻ ngày muốn xem nhà, nhu cầu công năng hoặc câu hỏi của bạn...",
-      "submit": "Gửi yêu cầu xem nhà"
-    },
+    "title": "Đặt Lịch Xem Nhà Hoặc Nhận Hồ Sơ Đầu Tư",
+    "subtitle": "Để lại thông tin liên hệ và bất động sản bạn quan tâm để nhận bản vẽ mặt bằng, dự phóng lợi suất và lịch hẹn riêng.",
+    "nameLabel": "Họ và tên",
+    "namePlaceholder": "Nhập họ và tên của bạn",
+    "emailLabel": "Địa chỉ Email",
+    "emailPlaceholder": "you@example.com",
+    "propertyLabel": "Bất động sản quan tâm",
+    "propertyPlaceholder": "Chọn một căn nhà / biệt thự",
+    "propertyGeneral": "Tư vấn tổng quan danh mục AuraVilla",
+    "notesLabel": "Thời gian dự kiến & Nhu cầu",
+    "notesPlaceholder": "Chia sẻ ngày muốn xem nhà hoặc tiêu chí đầu tư của bạn...",
+    "submit": "Gửi yêu cầu tư vấn",
+    "demoNote": "Biểu mẫu xem trước tĩnh — dữ liệu được kiểm tra cục bộ trên trình duyệt.",
     "validation": {
       "nameRequired": "Vui lòng nhập họ và tên của bạn.",
       "emailInvalid": "Vui lòng nhập địa chỉ email hợp lệ.",
       "propertyRequired": "Vui lòng chọn bất động sản hoặc hình thức tư vấn."
     },
-    "successMessage": "Cảm ơn bạn. Yêu cầu tư vấn đã được ghi nhận trong phiên xem trước này. Chuyên viên sẽ liên hệ về bất động sản bạn đã chọn.",
-    "demoNote": "Biểu mẫu xem trước tĩnh — dữ liệu được kiểm tra cục bộ trên trình duyệt."
-  },
-  "footer": {
-    "tagline": "Nhà ở kiến trúc, biệt thự và bất động sản cao cấp tuyển chọn cho giá trị sống bền vững.",
-    "quickLinks": "Điều hướng",
-    "languages": "Ngôn ngữ",
-    "copyright": "© 2026 AuraVilla. Nền tảng giới thiệu bất động sản.",
-    "backToTop": "Lên đầu trang"
+    "successMessage": "Cảm ơn bạn. Yêu cầu tư vấn riêng đã được ghi nhận trong phiên xem trước này."
   }
 }

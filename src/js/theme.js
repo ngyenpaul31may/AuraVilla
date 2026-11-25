@@ -1,6 +1,7 @@
 /**
  * AuraVilla lightweight theme switcher.
- * Supports "light" and "dark" themes persisted in localStorage with prefers-color-scheme fallback.
+ * Defaults to "light" on first visit to match the primary design,
+ * and persists explicit user selection ("light" | "dark") in localStorage.
  */
 (() => {
   const STORAGE_KEY = "auravilla_theme";
@@ -12,7 +13,8 @@
 
   function tr(key, fallback) {
     if (window.AuraI18n && typeof window.AuraI18n.t === "function") {
-      return window.AuraI18n.t(key, fallback);
+      const val = window.AuraI18n.t(key, fallback);
+      if (val !== key) return val;
     }
     return fallback;
   }
@@ -25,13 +27,6 @@
       }
     } catch {
       // Ignore storage read errors
-    }
-
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      return "dark";
     }
     return "light";
   }
