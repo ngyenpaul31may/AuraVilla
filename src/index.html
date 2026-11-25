@@ -187,72 +187,121 @@
             <div class="glass-widget occupancy-widget">
               <div class="widget-header">
                 <span data-i18n="hero.occupancyTitle">Occupancy Rate</span>
-                <span aria-hidden="true">…</span>
+                <span class="widget-dash-btn" aria-hidden="true">—</span>
               </div>
 
               <div class="occupancy-body">
                 <div class="donut-wrap">
-                  <svg viewBox="0 0 120 120" width="106" height="106" aria-hidden="true">
-                    <circle
-                      cx="60"
-                      cy="60"
-                      r="44"
-                      fill="none"
-                      stroke="#34d399"
-                      stroke-width="16"
-                      stroke-dasharray="171 276"
-                      transform="rotate(-90 60 60)"
+                  <svg viewBox="0 0 180 180" width="156" height="156" aria-hidden="true">
+                    <defs>
+                      <pattern
+                        id="vacantPattern"
+                        width="7"
+                        height="7"
+                        patternUnits="userSpaceOnUse"
+                        patternTransform="rotate(45)"
+                      >
+                        <rect width="7" height="7" fill="rgba(255,255,255,0.62)" />
+                        <circle cx="2" cy="2" r="1.4" fill="#9CA3AF" />
+                        <circle cx="5.5" cy="5.5" r="1.4" fill="#9CA3AF" />
+                      </pattern>
+                      <mask id="vacantArcMask">
+                        <circle
+                          cx="90"
+                          cy="90"
+                          r="62"
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-width="24"
+                          stroke-linecap="round"
+                          stroke-dasharray="20.6 389.56"
+                          stroke-dashoffset="-353.9"
+                          transform="rotate(-90 90 90)"
+                        />
+                      </mask>
+                    </defs>
+
+                    <rect
+                      width="180"
+                      height="180"
+                      fill="url(#vacantPattern)"
+                      mask="url(#vacantArcMask)"
                     />
+
                     <circle
-                      cx="60"
-                      cy="60"
-                      r="44"
+                      cx="90"
+                      cy="90"
+                      r="62"
                       fill="none"
-                      stroke="#f472b6"
-                      stroke-width="16"
-                      stroke-dasharray="69 276"
-                      stroke-dashoffset="-171"
-                      transform="rotate(-90 60 60)"
+                      stroke="#FF639E"
+                      stroke-width="24"
+                      stroke-linecap="round"
+                      stroke-dasharray="211.5 389.56"
+                      stroke-dashoffset="-15"
+                      transform="rotate(-90 90 90)"
                     />
+
                     <circle
-                      cx="60"
-                      cy="60"
-                      r="44"
+                      cx="90"
+                      cy="90"
+                      r="62"
                       fill="none"
-                      stroke="#60a5fa"
-                      stroke-width="16"
-                      stroke-dasharray="36 276"
-                      stroke-dashoffset="-240"
-                      transform="rotate(-90 60 60)"
+                      stroke="#43C769"
+                      stroke-width="24"
+                      stroke-linecap="round"
+                      stroke-dasharray="67.4 389.56"
+                      stroke-dashoffset="-256.5"
+                      transform="rotate(-90 90 90)"
                     />
                   </svg>
+
+                  <span class="donut-pill donut-pill-13" aria-hidden="true">13%</span>
+                  <span class="donut-pill donut-pill-62" aria-hidden="true">62%</span>
+                  <span class="donut-pill donut-pill-25" aria-hidden="true">25%</span>
+
                   <div class="donut-center">
                     <strong data-i18n="hero.occupancyTotal">74</strong>
-                    <span data-i18n="hero.occupancyUnit">Homes</span>
+                    <span data-i18n="hero.occupancyUnit">Houses</span>
                   </div>
                 </div>
 
                 <div class="occupancy-legend">
                   <div class="legend-item">
                     <span class="legend-label">
-                      <span class="legend-dot" style="background: #f472b6"></span>
+                      <span class="legend-icon-badge is-pink" aria-hidden="true">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                          <circle cx="8" cy="15" r="4" stroke="currentColor" stroke-width="2.4" />
+                          <path d="M11 12L19 4M16 7L19 10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+                        </svg>
+                      </span>
                       <span data-i18n="hero.rented">Rented</span>
                     </span>
-                    <strong>62%</strong>
+                    <strong class="legend-pct">62%</strong>
                   </div>
+
                   <div class="legend-item">
                     <span class="legend-label">
-                      <span class="legend-dot" style="background: #34d399"></span>
+                      <span class="legend-icon-badge is-green" aria-hidden="true">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                          <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="2.4" />
+                          <path d="M12 3V6M12 18V21M3 12H6M18 12H21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+                        </svg>
+                      </span>
                       <span data-i18n="hero.maintenance">Maintenance</span>
                     </span>
-                    <strong>25%</strong>
+                    <strong class="legend-pct">25%</strong>
                   </div>
+
                   <div class="legend-item">
                     <span class="legend-label">
-                      <span class="legend-dot" style="background: #60a5fa"></span>
+                      <span class="legend-icon-badge is-gray" aria-hidden="true">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                          <path d="M4 11L12 4.5L20 11V19.5H4V11Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+                        </svg>
+                      </span>
                       <span data-i18n="hero.vacant">Vacant</span>
                     </span>
-                    <strong>13%</strong>
+                    <strong class="legend-pct">13%</strong>
                   </div>
                 </div>
               </div>
@@ -262,7 +311,13 @@
             <div class="glass-widget advisor-widget">
               <div class="advisor-head">
                 <div class="advisor-user">
-                  <span class="avatar-circle" aria-hidden="true">BW</span>
+                  <img
+                    src="assets/images/avatar-bruce.png"
+                    alt="Bruce Walker"
+                    class="advisor-avatar"
+                    width="32"
+                    height="32"
+                  />
                   <span data-i18n="hero.advisorName">Bruce Walker</span>
                 </div>
                 <span class="advisor-amount" data-i18n="hero.advisorValue">
@@ -270,37 +325,84 @@
                 </span>
               </div>
 
-              <div class="segment-bars" aria-hidden="true">
-                <span class="segment-bar is-blue"></span>
-                <span class="segment-bar is-blue"></span>
-                <span class="segment-bar is-blue"></span>
-                <span class="segment-bar is-blue"></span>
-                <span class="segment-bar is-blue"></span>
-                <span class="segment-bar is-blue"></span>
-                <span class="segment-bar is-blue"></span>
-                <span class="segment-bar is-blue"></span>
-                <span class="segment-bar is-blue"></span>
-                <span class="segment-bar is-blue"></span>
-                <span class="segment-bar is-blue"></span>
-                <span class="segment-bar is-blue"></span>
-                <span class="segment-bar is-blue"></span>
-                <span class="segment-bar"></span>
-                <span class="segment-bar"></span>
-                <span class="segment-bar"></span>
-                <span class="segment-bar"></span>
-                <span class="segment-bar"></span>
-                <span class="segment-bar"></span>
-                <span class="segment-bar"></span>
-                <span class="segment-bar"></span>
-                <span class="segment-bar"></span>
+              <div class="advisor-bars" aria-hidden="true">
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar is-blue"></span>
+                <span class="advisor-bar"></span>
+                <span class="advisor-bar"></span>
+                <span class="advisor-bar"></span>
+                <span class="advisor-bar"></span>
+                <span class="advisor-bar"></span>
+                <span class="advisor-bar"></span>
+                <span class="advisor-bar"></span>
+                <span class="advisor-bar"></span>
+                <span class="advisor-bar"></span>
+                <span class="advisor-bar"></span>
+                <span class="advisor-bar"></span>
+                <span class="advisor-bar"></span>
+                <span class="advisor-bar"></span>
               </div>
 
               <div class="advisor-foot">
-                <span>
-                  <span data-i18n="hero.closed">Closed</span> ·
-                  <span data-i18n="hero.projected">Projected</span>
-                </span>
-                <strong>7 / 15</strong>
+                <div class="advisor-legend-group">
+                  <span class="advisor-legend-item">
+                    <span class="advisor-dot is-blue" aria-hidden="true"></span>
+                    <span data-i18n="hero.closed">Closed</span>
+                  </span>
+                  <span class="advisor-legend-item">
+                    <span class="advisor-dot is-empty" aria-hidden="true"></span>
+                    <span data-i18n="hero.projected">Projected</span>
+                  </span>
+                </div>
+
+                <div class="advisor-stats-group">
+                  <span class="advisor-stat-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path
+                        d="M8.5 12.5L11 15L16.5 9.5M4 11L9 6L12 8.5L15 6L20 11L14.5 17.5C13.1 19 10.9 19 9.5 17.5L4 11Z"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <strong>7</strong>
+                  </span>
+                  <span class="advisor-stat-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect
+                        x="3"
+                        y="7"
+                        width="18"
+                        height="13"
+                        rx="2.5"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                      />
+                      <path
+                        d="M9 7V5C9 4.45 9.45 4 10 4H14C14.55 4 15 4.45 15 5V7M3 12H21"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                      />
+                    </svg>
+                    <strong>15</strong>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
