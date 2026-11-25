@@ -1279,6 +1279,64 @@ button {
   position: absolute;
   top: 12px;
   left: 12px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78),
+    0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.property-status-badge.pill-peach {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 234, 214, 0.86) 0%,
+    rgba(244, 212, 186, 0.72) 100%
+  );
+  color: #e0530a;
+}
+
+.property-status-badge.pill-mint {
+  background: linear-gradient(
+    180deg,
+    rgba(214, 249, 224, 0.88) 0%,
+    rgba(186, 238, 203, 0.74) 100%
+  );
+  color: #15803d;
+}
+
+.property-status-badge.pill-lilac {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 222, 252, 0.88) 0%,
+    rgba(232, 198, 246, 0.74) 100%
+  );
+  color: #7e22ce;
+}
+
+:root[data-theme="dark"] .property-status-badge {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 4px 12px rgba(0, 0, 0, 0.28);
+}
+
+:root[data-theme="dark"] .property-status-badge.pill-peach {
+  background: rgba(68, 34, 18, 0.78);
+  color: #fdba74;
+}
+
+:root[data-theme="dark"] .property-status-badge.pill-mint {
+  background: rgba(16, 62, 43, 0.78);
+  color: #6ee7b7;
+}
+
+:root[data-theme="dark"] .property-status-badge.pill-lilac {
+  background: rgba(62, 24, 72, 0.78);
+  color: #f0abfc;
 }
 
 .property-info {
