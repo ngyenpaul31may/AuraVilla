@@ -2675,14 +2675,15 @@ button {
   }
 
   .hero-section {
-    min-height: 680px;
-    padding-top: 96px;
+    min-height: 0;
+    padding: 92px 0 40px;
   }
 
   .hero-widgets-stage {
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 28px;
+    gap: 12px;
   }
 
   .occupancy-widget,
@@ -2691,17 +2692,14 @@ button {
     max-width: 360px;
   }
 
-  .advisor-bars {
-    gap: 3px;
-  }
-
   .dream-hero-composition {
-    min-height: 290px;
-    padding-bottom: 165px;
+    min-height: 0;
+    padding-bottom: 140px;
   }
 
   .dream-split-row {
     padding: 0;
+    margin-top: 8px;
   }
 
   .dream-house-word {
@@ -2709,9 +2707,415 @@ button {
   }
 
   .dream-house-photo {
-    bottom: -24px;
+    bottom: -20px;
     width: min(440px, 92%);
-    height: 220px;
+    height: 165px;
+  }
+
+  /* Mobile compaction: global */
+  .section-block {
+    padding: 48px 0;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .centered-header {
+    margin-bottom: 24px;
+  }
+
+  .centered-header .section-desc {
+    margin-top: 8px;
+  }
+
+  .insight-tab-desc,
+  .property-summary,
+  .empire-copy p {
+    font-size: 0.875rem;
+  }
+
+  /* Header / mobile nav (no logo, unified 44px glass controls) */
+  .site-header {
+    top: 12px;
+  }
+
+  .nav-logo-badge {
+    display: none;
+  }
+
+  .nav-pill,
+  .site-header.is-scrolled .nav-pill {
+    padding: 0;
+    gap: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .nav-toggle {
+    width: 44px;
+    height: 44px;
+    gap: 5px;
+    background: var(--glass-pill-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 6px 20px rgba(10, 24, 54, 0.12);
+    transition: background-color var(--transition), border-color var(--transition),
+      box-shadow var(--transition);
+  }
+
+  .site-header.is-scrolled .nav-toggle {
+    background: var(--glass-pill-scrolled);
+    border-color: var(--border-subtle);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .nav-toggle-line {
+    width: 16px;
+    height: 1.5px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    transition: transform var(--transition), background-color var(--transition);
+  }
+
+  .site-header.is-scrolled .nav-toggle-line {
+    background-color: var(--text-primary);
+  }
+
+  .nav-toggle[aria-expanded="true"] .nav-toggle-line:first-child {
+    transform: translateY(3.25px) rotate(45deg);
+  }
+
+  .nav-toggle[aria-expanded="true"] .nav-toggle-line:last-child {
+    transform: translateY(-3.25px) rotate(-45deg);
+  }
+
+  .control-pill {
+    height: 44px;
+    padding: 3px;
+  }
+
+  .lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    min-width: 38px;
+    padding: 0 11px;
+  }
+
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    min-height: 44px;
+    padding: 0 14px;
+    box-shadow: 0 6px 20px rgba(10, 24, 54, 0.12);
+  }
+
+  .site-header.is-scrolled .theme-toggle {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .mobile-drawer {
+    gap: 0;
+    padding: 6px 18px;
+  }
+
+  .mobile-drawer a,
+  .mobile-drawer button {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .mobile-drawer > :last-child {
+    border-bottom: none;
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .occupancy-widget {
+    padding: 14px 16px 16px;
+  }
+
+  .widget-header {
+    margin-bottom: 8px;
+  }
+
+  .advisor-widget {
+    display: none;
+  }
+
+  /* Insights */
+  .insights-top {
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .insights-panel {
+    min-height: 0;
+    gap: 12px;
+  }
+
+  .insights-tabs {
+    padding: 4px;
+    gap: 8px;
+  }
+
+  .insight-tab {
+    padding: 12px 16px;
+  }
+
+  .insight-tab:not(.is-active) .insight-tab-head {
+    margin-bottom: 0;
+  }
+
+  .insight-tab:not(.is-active) .insight-tab-desc {
+    display: none;
+  }
+
+  .insight-tab.is-active {
+    padding: 18px;
+  }
+
+  .insight-icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .insight-tab.is-active .insight-tab-title {
+    font-size: 1.25rem;
+  }
+
+  .insight-tab.is-active .insight-tab-desc {
+    margin-top: 8px;
+  }
+
+  .insights-visual {
+    padding: 20px 16px;
+  }
+
+  .revenue-value {
+    font-size: 2.2rem;
+  }
+
+  .revenue-delta-row {
+    margin-bottom: 14px;
+  }
+
+  .chart-area {
+    height: 160px;
+  }
+
+  /* Carousel */
+  .carousel-stage {
+    padding: 4px 0 12px;
+  }
+
+  .property-card.is-left,
+  .property-card.is-right {
+    display: none;
+  }
+
+  .circle-nav-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .explore-btn {
+    min-height: 44px;
+  }
+
+  /* Dream banner */
+  .dream-line-1,
+  .dream-house-word {
+    font-size: 2.25rem;
+  }
+
+  .dream-accent {
+    font-size: 2.6rem;
+  }
+
+  .dream-cards-grid {
+    gap: 10px;
+  }
+
+  .dream-card {
+    padding: 18px 18px 14px;
+    gap: 14px;
+  }
+
+  .dream-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+  }
+
+  .find-more-btn {
+    padding-top: 10px;
+  }
+
+  /* Bento (no blanket .bento-card padding: it would override per-card padding) */
+  .bento-grid {
+    gap: 12px;
+  }
+
+  .bento-card h3,
+  .sustainable-copy h3,
+  .empire-copy h3 {
+    font-size: 1.3rem;
+  }
+
+  .bento-unified,
+  .bento-collab {
+    padding: 20px 20px 0;
+  }
+
+  .mini-dashboard-wrap {
+    margin: 0 -20px;
+  }
+
+  .bento-collab {
+    min-height: 0;
+  }
+
+  .sustainable-visual {
+    flex: none;
+    min-height: 0;
+    height: 260px;
+  }
+
+  .globe-stage {
+    height: 170px;
+  }
+
+  .globe-svg {
+    width: 200px;
+    height: 170px;
+  }
+
+  .collab-tag.is-2 {
+    top: 70px;
+  }
+
+  .sustainable-copy {
+    padding: 20px 20px 8px;
+  }
+
+  .empire-copy p {
+    margin-bottom: 16px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 48px 0 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 20px;
+    padding-bottom: 28px;
+  }
+
+  .footer-grid > :first-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand {
+    margin-bottom: 10px;
+  }
+
+  .footer-tagline {
+    max-width: none;
+    margin-bottom: 16px;
+  }
+
+  .footer-col-title {
+    margin-bottom: 4px;
+  }
+
+  .footer-col-list {
+    gap: 0;
+  }
+
+  .footer-col-list a {
+    display: block;
+    padding: 11px 0;
+  }
+
+  .footer-bottom {
+    padding-top: 16px;
+    gap: 0 16px;
+  }
+
+  .footer-legal a {
+    display: inline-block;
+    padding: 12px 0;
+  }
+
+  /* Modals */
+  .modal-backdrop {
+    padding: 12px;
+  }
+
+  .modal-dialog {
+    max-height: calc(100dvh - 24px);
+  }
+
+  .modal-media {
+    min-height: 180px;
+    max-height: 200px;
+  }
+
+  .modal-body {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .modal-dialog-single {
+    padding: 24px 18px;
+  }
+
+  /* Grid ignores the pill's inline align-self, so shrink it clear of the close button */
+  .modal-dialog-single > .pill-badge {
+    justify-self: start;
+  }
+
+  .modal-close {
+    width: 44px;
+    height: 44px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .modal-meta {
+    padding-right: 48px;
+  }
+
+  .modal-title {
+    font-size: 1.3rem;
+  }
+
+  .form-stack {
+    gap: 10px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
   }
 }
 
@@ -2746,7 +3150,15 @@ button {
   }
 
   .dream-banner {
-    padding: 36px 18px 20px;
+    padding: 28px 16px 16px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .mobile-drawer {
+    margin: 10px 16px 0;
   }
 
   .occupancy-body {
