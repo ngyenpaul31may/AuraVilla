@@ -282,22 +282,89 @@
       card.appendChild(info);
       stage.appendChild(card);
     });
+
+    const dotsEl = document.getElementById("carousel-dots");
+    if (dotsEl) {
+      if (dotsEl.children.length !== total) {
+        dotsEl.innerHTML = "";
+        PROPERTIES.forEach((_, idx) => {
+          const dot = createEl("button", "carousel-dot");
+          dot.type = "button";
+          dot.addEventListener("click", () => {
+            state.carouselIndex = idx;
+            renderCarousel();
+          });
+          dotsEl.appendChild(dot);
+        });
+      }
+      PROPERTIES.forEach((item, idx) => {
+        const dot = dotsEl.children[idx];
+        const isActive = idx === state.carouselIndex;
+        dot.classList.toggle("is-active", isActive);
+        dot.setAttribute("aria-label", tr(`featured.items.${item.id}.title`, item.id));
+        if (isActive) dot.setAttribute("aria-current", "true");
+        else dot.removeAttribute("aria-current");
+      });
+    }
   }
 
   function bindCarousel() {
     const prevBtn = document.getElementById("carousel-prev");
     const nextBtn = document.getElementById("carousel-next");
+    const stage = document.getElementById("carousel-stage");
+    const mobileMq = window.matchMedia("(max-width: 768px)");
 
-    prevBtn?.addEventListener("click", () => {
+    const step = (delta) => {
       state.carouselIndex =
-        (state.carouselIndex - 1 + PROPERTIES.length) % PROPERTIES.length;
+        (state.carouselIndex + delta + PROPERTIES.length) % PROPERTIES.length;
       renderCarousel();
-    });
+    };
 
-    nextBtn?.addEventListener("click", () => {
-      state.carouselIndex = (state.carouselIndex + 1) % PROPERTIES.length;
-      renderCarousel();
-    });
+    prevBtn?.addEventListener("click", () => step(-1));
+    nextBtn?.addEventListener("click", () => step(1));
+
+    if (!stage) return;
+
+    let startX = null;
+    let startY = null;
+
+    stage.addEventListener(
+      "touchstart",
+      (e) => {
+        if (!mobileMq.matches || e.touches.length !== 1) {
+          startX = null;
+          return;
+        }
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+      },
+      { passive: true },
+    );
+
+    stage.addEventListener(
+      "touchcancel",
+      () => {
+        startX = null;
+      },
+      { passive: true },
+    );
+
+    stage.addEventListener(
+      "touchend",
+      (e) => {
+        if (startX === null || e.changedTouches.length !== 1) {
+          startX = null;
+          return;
+        }
+        const dx = e.changedTouches[0].clientX - startX;
+        const dy = e.changedTouches[0].clientY - startY;
+        startX = null;
+        if (Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+          step(dx < 0 ? 1 : -1);
+        }
+      },
+      { passive: true },
+    );
   }
 
   function populatePropertySelect() {
