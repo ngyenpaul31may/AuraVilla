@@ -2676,20 +2676,54 @@ button {
 
   .hero-section {
     min-height: 0;
-    padding: 92px 0 40px;
+    padding: 78px 0 32px;
+    background: linear-gradient(180deg, #007bd9 0%, #1d96ea 34%, var(--bg-canvas) 100%);
+  }
+
+  :root[data-theme="dark"] .hero-section {
+    background: linear-gradient(180deg, #07204d 0%, #0d326d 34%, var(--bg-canvas) 100%);
+  }
+
+  .hero-backdrop img {
+    position: relative;
+    top: 52px;
+    height: calc(100% - 52px);
+    object-position: center 42%;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 22%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 22%);
+  }
+
+  .hero-backdrop::after {
+    background: linear-gradient(
+      180deg,
+      rgba(6, 94, 184, 0.24) 0%,
+      rgba(6, 72, 152, 0.06) 44%,
+      rgba(244, 245, 247, 0) 72%,
+      var(--bg-canvas) 98%
+    );
+  }
+
+  :root[data-theme="dark"] .hero-backdrop::after {
+    background: linear-gradient(
+      180deg,
+      rgba(7, 32, 77, 0.56) 0%,
+      rgba(8, 28, 66, 0.24) 44%,
+      rgba(11, 13, 18, 0.32) 72%,
+      var(--bg-canvas) 98%
+    );
   }
 
   .hero-widgets-stage {
     flex-direction: column;
     align-items: center;
-    margin-top: 28px;
+    margin-top: 26px;
     gap: 12px;
   }
 
   .occupancy-widget,
   .advisor-widget {
     width: 100%;
-    max-width: 360px;
+    max-width: 356px;
   }
 
   .dream-hero-composition {
@@ -2842,16 +2876,96 @@ button {
 
   /* Hero */
   .hero-title {
-    font-size: 2rem;
+    max-width: 340px;
+    font-size: clamp(1.75rem, 7.2vw, 2.1rem);
+    line-height: 1.12;
     margin-bottom: 16px;
+    text-shadow: 0 3px 18px rgba(4, 34, 84, 0.34);
+  }
+
+  .hero-content .btn-pill {
+    min-height: 44px;
+    padding: 10px 22px;
+    font-size: 0.88rem;
+    box-shadow: 0 10px 26px rgba(10, 24, 54, 0.24);
   }
 
   .occupancy-widget {
-    padding: 14px 16px 16px;
+    padding: 14px 16px;
+    border-radius: 20px;
   }
 
   .widget-header {
-    margin-bottom: 8px;
+    font-size: 0.86rem;
+    margin-bottom: 10px;
+  }
+
+  .widget-dash-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 0.72rem;
+  }
+
+  .occupancy-body {
+    gap: 14px;
+  }
+
+  .donut-wrap,
+  .donut-wrap svg {
+    width: 112px;
+    height: 112px;
+  }
+
+  .donut-pill {
+    padding: 2px 6px;
+    font-size: 0.58rem;
+  }
+
+  .donut-pill-13 {
+    top: 2px;
+    left: 18%;
+  }
+
+  .donut-pill-62 {
+    top: 30%;
+    right: -4px;
+  }
+
+  .donut-pill-25 {
+    bottom: 22%;
+    left: -4px;
+  }
+
+  .donut-center strong {
+    font-size: 1.6rem;
+  }
+
+  .donut-center span {
+    font-size: 0.66rem;
+  }
+
+  .occupancy-legend {
+    gap: 9px;
+    min-width: 0;
+  }
+
+  .legend-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .legend-label {
+    font-size: 0.78rem;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .legend-pct {
+    font-size: 0.94rem;
+    font-weight: 600;
+    flex-shrink: 0;
   }
 
   .advisor-widget {
@@ -3165,14 +3279,10 @@ button {
     gap: 12px;
   }
 
-  .donut-wrap {
-    width: 136px;
-    height: 136px;
-  }
-
+  .donut-wrap,
   .donut-wrap svg {
-    width: 136px;
-    height: 136px;
+    width: 104px;
+    height: 104px;
   }
 
   .bento-empire {
